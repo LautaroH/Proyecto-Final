@@ -2,13 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8" />
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-  		<link rel="stylesheet" href="css/default/default.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="plugins/bootstrap/4.1.3/bootstrap.min.css">
+      <link rel="stylesheet" href="css/BRCmascotas.css" />
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-		<script src="jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -28,155 +25,32 @@
 
 				<nav>
 					<ul>
-						<li><a href="index.html" id="homenav">Inicio</a></li>
-						<li><a href="mascotas.html" id="fullwidthnav">Mascotas Perdidas</a></li>
-						<li><a href="adopcion.html" id="fullwidthnav">Adopcion</a></li>
-            <li><a href="parejas.html" id="fullwidthnav">Parejas</a></li>
-            <li><a href="Veterinarias.html" id="fullwidthnav">Veterinarias</a></li>
-
-            <li><a href="perfil.html" id="fullwidthnav">Perfil</a></li>
+						<li><a href="javascript:;" id="homenav" class="btn_seccion" seccion="noticias">Inicio</a></li>
+						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="mascotas">Mascotas Perdidas</a></li>
+						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="adopcion">Adopcion</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="parejas">Parejas</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="veterinarias">Veterinarias</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="perfil">Perfil</a></li>
 					</ul>
 				</nav>
 			</header>
 
 			<!--__--__--__--__--  T H E    S L I D E R --__--__--__--___--__--__--__-->
-			<div class="slider-wrapper theme-default">
-				<div id="slider" class="nivoSlider">
-					<img src="images/banner.jpg" alt="" />
 
-				</div>
-			</div>
-			<script type="text/javascript">
-			$(window).load(function() {
-				$('#slider').nivoSlider({pauseTime: 6000,});
-			});
-			</script>
+      	<img src="images/banner.jpg" alt="" />
 
-			<!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
-			<section>
-				<div id="line">
-					<div class="dline"></div>
-					<h1>Ultimas publicaciones</h1>
-					<div class="dline"></div>
-				</div>
-				<div id="ourserv">
-        <div>
-          <a class="btn btn-primary">Crear publicacion</a>
-        </div>
-        <br>
-        <article>
-
-          <h1><a href="the100.html"></a></h1>
-          <a href="the100.html"><img src="images/perdido.jpg" alt="" /></a>
-          <p>Se escapó anoche en el kilómetro 12600, lo vieron por la ruta parada km13 aquiles, pitbull marrón, con collar rojo. Cualquier cosa comunicarse a 2944332727</p>
-
-        </article>
-        <article class="lastarticle">
-
-          <h1><a href="strangerthings.html"></a></h1>
-          <a href="StrangerThings.html"><img src="images/pareja3.jpg" alt="" /></a>
-          <p>Hermoso ejemplar - Schnauzer mini blanco - Carnet sanitario al dia. Excelentes gen. Si queres cruzar tu Schnauzer mini llamame o escribieme por whatsapp o mensaje de exto - (Claro) 261 300 3068</p>
-
-        </article>
-        <article>
-
-          <h1><a href="the100.html"></a></h1>
-          <a href="the100.html"><img src="images/adopcion7.jpg" alt="" /></a>
-          <p>Semilla busca un hermoso hogar, es una peque de 6/7 meses que ha sido abandonada, el martes será castrada y estará lista para su nueva FAMILIA!!
-            Es petacona, su tamaño es debajo de las rodillas y ya no crecerá más, ideal como perra de compañía, es una DULCE</p>
-        </article>
-        <article>
-
-          <h1><a href="the100.html"></a></h1>
-          <a href="the100.html"><img src="images/perdido4.jpg" alt="" /></a>
-          <p>Está en la zona de gallardo y Rivadavia. Se nota que está perdido!!</p>
-        </article>
-        <article>
-
-          <h1><a href="arrow.html"></a></h1>
-          <a href="arrow.html"><img src="images/pareja5.jpg" alt="" /></a>
-          <p>Se trata de un dogo de 65 kilos en perfecto estado de salud .
-              Comunicarse a mi WhatsApp al 223 454 6518 . Cobro el servicio .</p>
-
-        </article>
-        <article class="lastarticle">
-
-          <h1><a href="strangerthings.html"></a></h1>
-          <a href="StrangerThings.html"><img src="images/adopcion4.jpg" alt="" /></a>
-          <p>Cachorrito encontrado no puede quedárselo, así que busca adoptante para él, si lo querés comunicate al 154134452</p>
-
-        </article>
-				</div>
-
-				<!-- <div id="sline">
-					<div class="sdline"></div>
-
-					<div class="sdline"></div>
-				</div>
-				<div id="latestp">
-					<article>
-
-					<h1><a href="hawkeye.html">¿Donde esta Hawkeye?</a></h1>
-					<a href="hawkeye.html"><img src="images/hawkeye.jpg" alt="" /></a>
-
-
-
-					</article>
-					<article>
-						<h1><a href="animalesfantasticos.html"> Fantastic Beasts 2</a></h1>
-						<a href="animalesfantasticos.html"><img src="images/fantasticos.jpg" alt="" /></a>
-
-
-					</article>
-					<article>
-						<h1><a href="deadpool.html">Wade Wilson y David Beckham</a></h1>
-						<a href="deadpool.html"><img src="images/deadpool2.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article class="lastarticle">
-						<h1><a href="antman.html">Ant-Man and the Wasp</a></h1>
-						<a href="antman.html"><img src="images/antman.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<br>
-						<br>
-						<h1><a href="reasonswhy.html"> Regreso 13 Reasons Why</a></h1>
-						<a href="reasonswhy.html"><img src="images/reasonswhy.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<h1><a href="lukecage.html">Luke Cage temporada 2</a></h1>
-						<a href="lukecage.html"><img src="images/lukecage.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<h1><a href="daredevil.html">Daredevil temporada 3 </a></h1>
-						<a href="daredevil.html"><img src="images/daredevil.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<h1><a href="theshooter.html">Vuelve "The Shooter"</a></h1>
-						<a href="theshooter.html"><img src="images/theshooterr.jpg" alt="" /></a>
-
-
-					</article>
-				</div> -->
-			</section>
+<div id="contenedor_seccion">
+    <h1>Aca va el contenido</h1>
+</div>
 			<!--__--__--__--__--  T H E    F O O T E R --__--__--__--___--__--__--__-->
 			<footer>
-
+<h1>Acá va el footer</h1>
 			</footer>
 		</div>
+
+    	<script src="plugins/jquery/3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
+      <script src="plugins/bootstrap/4.1.3/popper.min.js" type="text/javascript"></script>
+      <script src="plugins/bootstrap/4.1.3/bootstrap.min.js" type="text/javascript"></script>
+      <script src="js/BRCmascotas.js" type="text/javascript"></script>
 	</body>
 </html>
