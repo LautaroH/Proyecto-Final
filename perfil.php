@@ -31,7 +31,6 @@
 						<li><a href="adopcion.html" id="fullwidthnav">Adopcion</a></li>
             <li><a href="parejas.html" id="fullwidthnav">Parejas</a></li>
             <li><a href="Veterinarias.html" id="fullwidthnav">Veterinarias</a></li>
-            <li><a href="castracion.html" id="fullwidthnav">Castracion</a></li>
             <li><a href="perfil.html" id="homenav">Perfil</a></li>
 					</ul>
 				</nav>
