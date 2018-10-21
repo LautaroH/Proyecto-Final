@@ -25,7 +25,7 @@
 
 				<nav>
 					<ul>
-						<li><a href="javascript:;" id="homenav" class="btn_seccion" seccion="noticias">Inicio</a></li>
+						<li><a href="javascript:;" id="fullwidthnav" class="btn_seccion" seccion="noticias">Inicio</a></li>
 						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="mascotas">Mascotas Perdidas</a></li>
 						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="adopcion">Adopcion</a></li>
             <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="parejas">Parejas</a></li>
@@ -44,7 +44,9 @@
 </div>
 			<!--__--__--__--__--  T H E    F O O T E R --__--__--__--___--__--__--__-->
 			<footer>
-<h1>Acá va el footer</h1>
+        <p>Posted by: Hege Refsnes</p>
+         <p>Contact information: <a href="mailto:someone@example.com">
+         someone@example.com</a>.</p>
 			</footer>
 		</div>
 

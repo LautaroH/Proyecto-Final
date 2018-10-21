@@ -7,17 +7,56 @@
 				</div>
 
 				<div id="ourserv">
-          <div>
-            <a class="btn btn-primary">Crear publicacion</a>
+          <div class="row">
+            <div class="col">
+              <a class="btn btn-primary btn-block">Me perdí</a>
+            </div>
+
+            <div class="col">
+              <a class="btn btn-outline-success btn-block">Me encontraron</a>
+            </div>
           </div>
-          <br>
-          <article>
+          
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
 
-            <h1><a href="the100.html"></a></h1>
-            <a href="the100.html"><img src="images/perdido.jpg" alt="" /></a>
-            <p>Se escapó anoche en el kilómetro 12600, lo vieron por la ruta parada km13 aquiles, pitbull marrón, con collar rojo. Cualquier cosa comunicarse a 2944332727</p>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/perdido.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text" style="color: black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
 
-          </article>
+
+
+            <article>
+                <div class="alert alert-primary">
+              <h1><a href="the100.html"></a></h1>
+              <a href="the100.html"><img src="images/perdido.jpg" alt="" /></a>
+              <p>Se escapó anoche en el kilómetro 12600, lo vieron por la ruta parada km13 aquiles, pitbull marrón, con collar rojo. Cualquier cosa comunicarse a 2944332727</p>
+
+              </div>
+              <a href="#" class="btn btn-primary alert alert-primary">Go somewhere</a>
+            </article>
+
+
+
           <article>
 
             <h1><a href="arrow.html"></a></h1>

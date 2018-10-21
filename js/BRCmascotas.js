@@ -5,18 +5,20 @@ jQuery(document).ready(function(){
     traernoticias();
   }
   $(".btn_seccion").click(function(){
+    
+      var seccion =$(this).attr("seccion");
+        $(".btn_seccion").attr("id","fullwidthnav");
+        $(this).attr("id","homenav");
+        //alert("hola" + seccion);
 
-var seccion =$(this).attr("seccion");
-alert("hola" + seccion);
-
-$.ajax({
-    type:"post",
-    url:"secciones/"+ seccion + ".php",
-    success: function (resultado) {
-      $("#contenedor_seccion").html(resultado);
-    }
-  })
-  })
+      $.ajax({
+          type:"post",
+          url:"secciones/"+ seccion + ".php",
+          success: function (resultado) {
+            $("#contenedor_seccion").html(resultado);
+          }
+        })
+        })
 
   //
   // function traertarjetas(){

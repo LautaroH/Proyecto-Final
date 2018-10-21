@@ -43,6 +43,9 @@
 
 }
 /********************* R E S E T *************************/
+article img{
+  width: 100%;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -89,7 +92,7 @@ body{
 	font-family: Source, Tahoma, sans-serif;
 	color: #fff;
 	font-size: 14px;
-	text-shadow: 1px 1px 0px #000;
+	/* text-shadow: 1px 1px 0px #000; */
 }
 #srt{
 	color: #f9f9f9;
@@ -227,6 +230,8 @@ header{
 	background: url('../images/bgdline.png') repeat-x ;
 	margin-bottom: 10px;
 }
+
+
 #ourserv article{
 	width: 275px;
 	display: inline-block;
