@@ -89,7 +89,7 @@ p{
 
 body{
 	background: url('../images/bg.png') repeat;
-	font-family: Source, Tahoma, sans-serif;
+	/* font-family: Source, Tahoma, sans-serif; */
 	color: #fff;
 	font-size: 14px;
 	/* text-shadow: 1px 1px 0px #000; */

@@ -5,7 +5,7 @@ jQuery(document).ready(function(){
     traernoticias();
   }
   $(".btn_seccion").click(function(){
-    
+
       var seccion =$(this).attr("seccion");
         $(".btn_seccion").attr("id","fullwidthnav");
         $(this).attr("id","homenav");
@@ -16,6 +16,19 @@ jQuery(document).ready(function(){
           url:"secciones/"+ seccion + ".php",
           success: function (resultado) {
             $("#contenedor_seccion").html(resultado);
+            switch (seccion) {
+              case "adopcion":$("#fotoportada").attr("src","images/adopta.jpg");
+                  break;
+              case "mascotas":$("#fotoportada").attr("src","images/perdidos.jpg");
+                  break;
+              case "parejas":$("#fotoportada").attr("src","images/parejas.jpg");
+                  break;
+              case "veterinarias":$("#fotoportada").attr("src","images/veterinaria.jpg");
+                  break;
+              case "noticias":$("#fotoportada").attr("src","images/banner.jpg");
+                  break;
+              default:
+            }
           }
         })
         })

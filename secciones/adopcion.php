@@ -9,52 +9,77 @@
 
         <div id="ourserv">
           <div>
-            <a class="btn btn-primary">Crear publicacion</a>
+						<button type="button" class="btn btn-warning btn-lg btn-block">Ofrezco Perro</button>
           </div>
           <br>
-          <article>
 
-            <h1><a href="the100.html"></a></h1>
-            <a href="the100.html"><img src="images/adopcion1.jpg" alt="" /></a>
-            <p>Perrito en adopción, no lo puedo tener en mi casa porque ya tengo demasiadas mascotas.</p>
+					<article>
+						<div class="card text-center alert bg-warning">
+							<img class="" src="images/adopcion1.jpg" alt="">
+							<br>
+							<p style="color:#000";>Perrito en adopción, no lo puedo tener en mi casa porque ya tengo demasiadas mascotas.</p>
+								<div class="card-body">
+									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
+								</div>
+						</div>
+				  </article>
 
-          </article>
-          <article>
+					<article>
+						<div class="card text-center alert bg-warning">
+							<img class="" src="images/adopcion2.jpg" alt="">
+							<br>
+							<p style="color:#000";>Perrito cachorro en adopción</p>
+								<div class="card-body">
+									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
+								</div>
+						</div>
+				  </article>
 
-            <h1><a href="arrow.html"></a></h1>
-            <a href="arrow.html"><img src="images/adopcion2.jpg" alt="" /></a>
-            <p>Perrito cachorro en adopción</p>
+					<article>
+						<div class="card text-center alert bg-warning">
+							<img class="" src="images/adopcion4.jpg" alt="">
+							<br>
+							<p style="color:#000";>Cachorrito encontrado no puede quedárselo, así que busca adoptante para él, si lo querés comunicate al 154134452</p>
+								<div class="card-body">
+									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
+								</div>
+						</div>
+					</article>
 
+					<article>
+						<div class="card text-center alert bg-warning">
+							<img class="" src="images/adopcion7.jpg" alt="">
+							<br>
+							<p style="color:#000";>Semilla busca un hermoso hogar, es una peque de 6/7 meses que ha sido abandonada, el martes será castrada y estará lista para su nueva FAMILIA!!
+	              Es petacona, su tamaño es debajo de las rodillas y ya no crecerá más, ideal como perra de compañía, es una DULCE</p>
+								<div class="card-body">
+									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
+								</div>
+						</div>
+					</article>
 
-          </article>
-          <article class="lastarticle">
+					<article>
+						<div class="card text-center alert bg-warning">
+							<img class="" src="images/adopcion6.jpg" alt="">
+							<br>
+							<p style="color:#000";>4 hembritas mamá labradora papá...ups... no lo sabemos te están esperando
+	              Serán tamaño grande, tienen 50 días, están desparasitadas y se entregan con su primera dosis de vacuna</p>
+								<div class="card-body">
+									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
+								</div>
+						</div>
+					</article>
 
-            <h1><a href="strangerthings.html"></a></h1>
-            <a href="StrangerThings.html"><img src="images/adopcion4.jpg" alt="" /></a>
-            <p>Cachorrito encontrado no puede quedárselo, así que busca adoptante para él, si lo querés comunicate al 154134452</p>
+					<article>
+						<div class="card text-center alert bg-warning">
+							<img class="" src="images/adopcion5.jpg" alt="">
+							<br>
+							<p style="color:#000";>Tienen 3 meses, están desparasitada y buscan un hogar para siempre. Tamaño medio grande</p>
+								<div class="card-body">
+									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
+								</div>
+						</div>
+					</article>
 
-          </article>
-          <article>
-
-            <h1><a href="the100.html"></a></h1>
-            <a href="the100.html"><img src="images/adopcion7.jpg" alt="" /></a>
-            <p>Semilla busca un hermoso hogar, es una peque de 6/7 meses que ha sido abandonada, el martes será castrada y estará lista para su nueva FAMILIA!!
-              Es petacona, su tamaño es debajo de las rodillas y ya no crecerá más, ideal como perra de compañía, es una DULCE</p>
-          </article>
-          <article>
-
-            <h1><a href="arrow.html"></a></h1>
-            <a href="arrow.html"><img src="images/adopcion6.jpg" alt="" /></a>
-            <p>4 hembritas mamá labradora papá...ups... no lo sabemos te están esperando
-              Serán tamaño grande, tienen 50 días, están desparasitadas y se entregan con su primera dosis de vacuna</p>
-
-          </article>
-          <article class="lastarticle">
-
-            <h1><a href="strangerthings.html"></a></h1>
-            <a href="StrangerThings.html"><img src="images/adopcion5.jpg" alt="" /></a>
-            <p>Tienen 3 meses, están desparasitada y buscan un hogar para siempre. Tamaño medio grande</p>
-
-          </article>
 				</div>
 			</section>

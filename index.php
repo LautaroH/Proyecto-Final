@@ -37,7 +37,7 @@
 
 			<!--__--__--__--__--  T H E    S L I D E R --__--__--__--___--__--__--__-->
 
-      	<img src="images/banner.jpg" alt="" />
+      	<img id="fotoportada" src="images/banner.jpg" alt="" />
 
 <div id="contenedor_seccion">
     <h1>Aca va el contenido</h1>
