@@ -74,7 +74,7 @@
 							<a href="#" class="btn btn-success alert alert-light">Contactar Usuario</a>
 						</div>
 				</div>
-			</article> -->
+			</article>
 
 			<article>
 				<div class="card text-center alert bg-success">
@@ -86,7 +86,7 @@
 						</div>
 				</div>
 			</article>
-
+-->
 		</div>
 </section>
 

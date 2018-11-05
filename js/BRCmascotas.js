@@ -19,7 +19,9 @@ jQuery(document).ready(function(){
             switch (seccion) {
               case "adopcion":$("#fotoportada").attr("src","images/adopta.jpg");
                   break;
-              case "mascotas":$("#fotoportada").attr("src","images/perdidos.jpg");
+              case "mascotas":
+                  $("#fotoportada").attr("src","images/perdidos.jpg");
+                  traerlistamascotas();
                   break;
               case "parejas":$("#fotoportada").attr("src","images/parejas.jpg");
                   break;
@@ -48,10 +50,22 @@ jQuery(document).ready(function(){
           url:"assets/ABM_publicacion.php",
           success: function(resultado){
             alert("Publicación cargada con éxito");
+            traerlistamascotas();
           }
 
         })
       })
+
+
+      function traerlistamascotas(){
+          $.ajax({
+            type:"post",
+            url:"secciones/lista_mascotas.php",
+            success: function (resultado) {
+              $("#lista_mascotas").html(resultado);
+}
+          })
+      }
   //
   // function traertarjetas(){
   //   alert("HOLO");
