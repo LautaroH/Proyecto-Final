@@ -47,7 +47,7 @@ jQuery(document).ready(function(){
           data:datos,
           url:"assets/ABM_publicacion.php",
           success: function(resultado){
-            alert("Ajax correcto");
+            alert("Publicación cargada con éxito");
           }
 
         })

@@ -16,7 +16,12 @@
             </div>
           </div>
 <br>
-			<article>
+
+
+<div id="lista_mascotas">
+
+</div>
+			<!-- <article>
 				<div class="card text-center alert bg-primary">
 					<img class="" src="images/perdido.jpg" alt="">
 					<br>
@@ -69,7 +74,7 @@
 							<a href="#" class="btn btn-success alert alert-light">Contactar Usuario</a>
 						</div>
 				</div>
-			</article>
+			</article> -->
 
 			<article>
 				<div class="card text-center alert bg-success">
