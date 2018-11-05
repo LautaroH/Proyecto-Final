@@ -33,6 +33,25 @@ jQuery(document).ready(function(){
         })
         })
 
+
+
+
+      $("#contenedor_seccion").on("click", "#publicar", function(){
+        // var datos={
+        //   edad:25,
+        //   nombre:"Laura",
+        // }
+        var datos = $("#form_perdidos").serialize();
+        $.ajax({
+          type:"post",
+          data:datos,
+          url:"assets/ABM_publicacion.php",
+          success: function(resultado){
+            alert("Ajax correcto");
+          }
+
+        })
+      })
   //
   // function traertarjetas(){
   //   alert("HOLO");
