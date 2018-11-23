@@ -1,5 +1,5 @@
 <?php
-session_name("")
+session_name("BRCmascotas");
 session_start();
 include "config.php";
 
@@ -13,6 +13,4 @@ $sql="INSERT INTO `publicaciones` (`id_usuario`, `tipo`, `publicacion`)
 
   $query= mysqli_query($conexion, $sql);
 //  echo $sql;
-
-
  ?>
