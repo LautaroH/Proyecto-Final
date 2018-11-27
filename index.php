@@ -25,19 +25,21 @@
 
 				<nav>
 					<ul>
-						<li><a href="javascript:;" id="fullwidthnav" class="btn_seccion" seccion="noticias">Inicio</a></li>
+						<li><a href="javascript:;" id="homenav" class="btn_seccion" seccion="noticias">Inicio</a></li>
+
 						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="mascotas">Mascotas Perdidas</a></li>
 						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="adopcion">Adopcion</a></li>
             <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="parejas">Parejas</a></li>
             <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="veterinarias">Veterinarias</a></li>
             <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="perfil">Perfil</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="login">Login</a></li>
 					</ul>
 				</nav>
 			</header>
 
 			<!--__--__--__--__--  T H E    S L I D E R --__--__--__--___--__--__--__-->
 
-      	<img id="fotoportada" src="images/banner.jpg" alt="" />
+      	<img id="fotoportada" src="images/banner/banner.jpg" alt="" />
 
 <div id="contenedor_seccion">
     <h1>Aca va el contenido</h1>
