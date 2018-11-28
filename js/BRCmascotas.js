@@ -14,12 +14,10 @@ jQuery(document).ready(function(){
       irASeccion(seccion);
 
   })
-
-
         function irASeccion(seccion){
 
             //alert("hola" + seccion);
-
+              //AJAX QUE CAMBIA DE SECCION SIN TENER QUE RECARGAR TODA LA PÁGINA
           $.ajax({
               type:"post",
               url:"secciones/"+ seccion + ".php",
@@ -45,9 +43,7 @@ jQuery(document).ready(function(){
             })
         }
 
-
-
-
+    //MODAL QUE SIRVE PARA LA PUBLICACION DE PERROS PERDIDOS Y ENCONTRADOS (LO SUBE A LA BASE DE DATOS)
       $("#contenedor_seccion").on("click", "#publicar", function(){
         // var datos={
         //   edad:25,
@@ -90,7 +86,7 @@ jQuery(document).ready(function(){
 
       })
 
-
+      //SUBE LA TARJETA A LA SECCIÓN
       function traerlistamascotas(){
           $.ajax({
             type:"post",
@@ -101,7 +97,7 @@ jQuery(document).ready(function(){
           })
       }
 
-
+//ABRE EL MODAL
 
 $("#contenedor_seccion").on("click", ".btn_encontrado_perdido", function(){
   var tipo=$(this).attr("tipo");//0 o 1
@@ -112,13 +108,7 @@ $("#contenedor_seccion").on("click", ".btn_encontrado_perdido", function(){
       $("#txt_titulo").text("Perro Perdido");
     }
 
-
-
-
-
   $("#modal_encontrado_perdido").modal("show");
-
-
 
 });
 
