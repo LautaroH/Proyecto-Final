@@ -29,7 +29,14 @@ while ($fila=mysqli_fetch_array($query)){
 ?>
   <article>
    <div class="card text-center alert bg-<?=$tipo?>">
-     <img class="" src="images/<?=$img?>" alt="">
+     <div class=""  style="height: 200px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-image: url('images/<?=$img?>');">
+     </div>
+     <!-- <img class="" src="images/<?=$img?>" alt=""> -->
+
      <br>
      <p> <?=$mensaje?> <?=$fecha?> </p>
        <div class="card-body">
