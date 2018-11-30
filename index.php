@@ -45,11 +45,11 @@
     <h1>Aca va el contenido</h1>
 </div>
 			<!--__--__--__--__--  T H E    F O O T E R --__--__--__--___--__--__--__-->
-			<footer>
+			<!-- <footer>
         <p>Posted by: Hege Refsnes</p>
          <p>Contact information: <a href="mailto:someone@example.com">
          someone@example.com</a>.</p>
-			</footer>
+			</footer> -->
 		</div>
 
     	<script src="plugins/jquery/3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
