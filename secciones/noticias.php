@@ -6,11 +6,12 @@
     <div class="dline"></div>
   </div>
   <div id="ourserv">
-  <div>
-    <a class="btn btn-primary">Crear publicacion</a>
-  </div>
+    <div>
+      <a class="btn btn-secondary btn-lg btn-block">Block level button</a>
+    </div>
   <br>
   <article>
+
 
     <h1><a href="the100.html"></a></h1>
     <a href="the100.html"><img src="images/perdido.jpg" alt="" /></a>
@@ -53,4 +54,4 @@
 
   </article>
   </div>
-</section>  
+</section>
