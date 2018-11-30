@@ -7,79 +7,62 @@
 					<div class="dline"></div>
 				</div>
 
-        <div id="ourserv">
-          <div>
-						<button type="button" class="btn btn-warning btn-lg btn-block">Ofrezco Perro</button>
+			<div id="ourserv">
+          <div class="row">
+            <div class="col">
+              <a  class="btnCssFunc btn btn-warning btn-block btn_adopcion" tipo="3">Perro en adopción</a>
+            </div>
           </div>
-          <br>
+<br>
 
-					<article>
-						<div class="card text-center alert bg-warning">
-							<img class="" src="images/adopcion1.jpg" alt="">
-							<br>
-							<p style="color:#000";>Perrito en adopción, no lo puedo tener en mi casa porque ya tengo demasiadas mascotas.</p>
-								<div class="card-body">
-									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
-								</div>
-						</div>
-				  </article>
 
-					<article>
-						<div class="card text-center alert bg-warning">
-							<img class="" src="images/adopcion2.jpg" alt="">
-							<br>
-							<p style="color:#000";>Perrito cachorro en adopción</p>
-								<div class="card-body">
-									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
-								</div>
-						</div>
-				  </article>
+<div id="lista_adopcion">
 
-					<article>
-						<div class="card text-center alert bg-warning">
-							<img class="" src="images/adopcion4.jpg" alt="">
-							<br>
-							<p style="color:#000";>Cachorrito encontrado no puede quedárselo, así que busca adoptante para él, si lo querés comunicate al 154134452</p>
-								<div class="card-body">
-									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
-								</div>
-						</div>
-					</article>
+</div>
+		</div>
 
-					<article>
-						<div class="card text-center alert bg-warning">
-							<img class="" src="images/adopcion7.jpg" alt="">
-							<br>
-							<p style="color:#000";>Semilla busca un hermoso hogar, es una peque de 6/7 meses que ha sido abandonada, el martes será castrada y estará lista para su nueva FAMILIA!!
-	              Es petacona, su tamaño es debajo de las rodillas y ya no crecerá más, ideal como perra de compañía, es una DULCE</p>
-								<div class="card-body">
-									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
-								</div>
-						</div>
-					</article>
+</section>
 
-					<article>
-						<div class="card text-center alert bg-warning">
-							<img class="" src="images/adopcion6.jpg" alt="">
-							<br>
-							<p style="color:#000";>4 hembritas mamá labradora papá...ups... no lo sabemos te están esperando
-	              Serán tamaño grande, tienen 50 días, están desparasitadas y se entregan con su primera dosis de vacuna</p>
-								<div class="card-body">
-									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
-								</div>
-						</div>
-					</article>
 
-					<article>
-						<div class="card text-center alert bg-warning">
-							<img class="" src="images/adopcion5.jpg" alt="">
-							<br>
-							<p style="color:#000";>Tienen 3 meses, están desparasitada y buscan un hogar para siempre. Tamaño medio grande</p>
-								<div class="card-body">
-									<a href="#" class="btn btn-warning alert alert-light">Contactar Usuario</a>
-								</div>
-						</div>
-					</article>
 
-				</div>
-			</section>
+<!-- ModalAdopcion -->
+<!-- <div class="modal fade" id="modal_encontrado_perdido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+<div class="modal fade" id="modal_adopcion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="txt_titulo" style="color:#000";>Perro en adopción</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+				<!-- <form id="form_perdidos"> -->
+				<form id="form_adopcion">
+					<textarea name="txt_mensaje" rows="8" cols="70"></textarea>
+						<input type="text" name="tipo" value="0" id="txt_tipo">
+				</form>
+
+				<div class="input-group mb-3">
+					</div>
+					<!-- UPLOAD FOto -->
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+  </div>
+  <div class="custom-file">
+		<form id="up_foto">
+			<input type="file" class="custom-file-input" id="id_foto" aria-describedby="inputGroupFileAddon01" name="foto">
+			<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+		</form>
+
+  </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="publicar">Publicar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/Adopcion.js" type="text/javascript"></script>

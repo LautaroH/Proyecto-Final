@@ -9,10 +9,10 @@
 				<div id="ourserv">
           <div class="row">
             <div class="col">
-              <a class="btn btn-primary btn-block btn_encontrado_perdido" tipo="0">Me perdí</a>
+              <a class="btnCssFunc btn btn-primary btn-block btn_encontrado_perdido" tipo="0">Me perdí</a>
             </div>
             <div class="col">
-              <a class="btn btn-success btn-block btn_encontrado_perdido"  tipo="1">Me encontraron</a>
+              <a class="btnCssFunc btn btn-success btn-block btn_encontrado_perdido"  tipo="1">Me encontraron</a>
             </div>
           </div>
 <br>
@@ -50,7 +50,8 @@
   </div>
   <div class="custom-file">
 		<form id="up_foto">
-			<input type="file" class="custom-file-input" id="id_foto" aria-describedby="inputGroupFileAddon01" name="foto">
+			<input type="file" class="custom-file-input" id="id_foto" aria-described
+			by="inputGroupFileAddon01" name="foto">
 			<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
 		</form>
 
@@ -64,3 +65,4 @@
     </div>
   </div>
 </div>
+<script src="js/Mascotas.js" type="text/javascript"></script>
