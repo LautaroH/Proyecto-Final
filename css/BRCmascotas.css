@@ -251,8 +251,11 @@ header{
 	margin:0;
 }
 #ourserv{
-	margin: 8px 0 15px 20px;
+	margin: 8px 0 15px 0;
 	width: 100%;
+}
+.btnCssFunc{
+ padding:.375rem 0 !important;
 }
 #ourserv img, #latestp img{
 	margin-bottom: 5px;
