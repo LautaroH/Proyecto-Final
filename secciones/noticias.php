@@ -6,9 +6,6 @@
     <div class="dline"></div>
   </div>
   <div id="ourserv">
-    <div>
-      <a class="btn btn-secondary btn-lg btn-block">Block level button</a>
-    </div>
   <br>
   <article>
 
