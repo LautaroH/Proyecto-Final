@@ -2,7 +2,7 @@ jQuery(document).ready(function(){
   var x= $(document);
   x.ready(inicio);
   function inicio(){
-
+    $("#form_registro").hide(); //Ocultar el formulario de registro, dejando visible el de inicio de session
     irASeccion("noticias");
   }
 
@@ -17,7 +17,7 @@ jQuery(document).ready(function(){
         function irASeccion(seccion){
 
             //alert("hola" + seccion);
-              //AJAX QUE CAMBIA DE SECCION SIN TENER QUE RECARGAR TODA LA PÁGINA
+          //AJAX QUE CAMBIA DE SECCION SIN TENER QUE RECARGAR TODA LA PÁGINA
           $.ajax({
               type:"post",
               url:"secciones/"+ seccion + ".php",
@@ -25,12 +25,14 @@ jQuery(document).ready(function(){
                 $("#contenedor_seccion").html(resultado);
                 switch (seccion) {
                   case "adopcion":$("#fotoportada").attr("src","images/banner/adopta.jpg");
+                    traerlistaadopcion();
                       break;
                   case "mascotas":
                       $("#fotoportada").attr("src","images/banner/perdidos.jpg");
                       traerlistamascotas();
                       break;
                   case "parejas":$("#fotoportada").attr("src","images/banner/parejas.jpg");
+                      traerlistaparejas();
                       break;
                   case "veterinarias":$("#fotoportada").attr("src","images/banner/veterinaria.jpg");
                       break;
@@ -58,19 +60,20 @@ jQuery(document).ready(function(){
 
 
 
-//ABRE EL MODAL ADopcion
-// $("#contenedor_seccion").on("click", ".btn_adopcion", function(){
-//   var tipo=$(this).attr("tipo");//0 o 1
-//
-//     $("#txt_tipo").val(tipo); //tendría que ser 3 (si esto funciona) por ende amarillo
-//     $("#txt_titulo").text("Perro en adopcion");
-//     if (tipo==3)  {
-//       $("#txt_titulo").text("Perro Perdido");
-//     }
-//
-//   $("#modal_adopcion").modal("show");
-//
-// });
+// ABRE EL MODAL ADopcion
+$("#menu").on("click", ".btn_acceder", function(){
+
+  $("#modal_acceder").modal("show");
+
+});
+
+
+
+
+$("#modal_acceder").on("click", ".btnCuenta", function(){
+  $("#form_registro,#form_login" ).toggle();
+//  $("#form_login").hide();
+})
 
   //
   // function traertarjetas(){
