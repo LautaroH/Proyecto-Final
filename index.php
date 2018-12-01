@@ -63,7 +63,7 @@
                               <input type="text" class="form-control" placeholder="Usuario" value="" />
                           </div>
                           <div class="form-group">
-                              <input type="password" class="form-control" placeholder="Contraseña" value="" />
+                              <input type="password" class="form-control" placeholder="Clave" value="" />
                           </div>
                           <div class="form-group">
                               <a href="#" class="btnCuenta" style="color:#F42D09";>Clickeá acá si no tenés cuenta</a>
@@ -78,7 +78,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Usuario" value="" />
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" value="" />
+                        <input type="password" class="form-control" placeholder="Clave" value="" />
                         <div class="form-group">
                             <a href="#" class="btnCuenta" style="color:#F42D09";>Ingresar con tu cuenta</a>
                         </div>
