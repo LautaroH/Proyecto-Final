@@ -6,55 +6,60 @@
 					<h1>Noticias</h1>
 					<div class="dline"></div>
 				</div>
-        <div id="ourserv">
-          <div>
-            <a class="btn btn-primary">Crear publicacion</a>
+
+			<div id="ourserv">
+          <div class="row">
+            <div class="col">
+              <a  class="btnCssFunc btn btn-danger btn-block btn_parejas" tipo="4">Buscar Pareja</a>
+            </div>
           </div>
-          <br>
-          <article>
-
-            <h1><a href="the100.html"></a></h1>
-            <a href="the100.html"><img src="images/pareja1.jpg" alt="" /></a>
-            <p>Hembra raza waimaraner de 1 año y 8 meses busca novio(solo realmente interesados y con macho puro)</p>
-
-          </article>
-          <article>
-
-            <h1><a href="arrow.html"></a></h1>
-            <a href="arrow.html"><img src="images/pareja2.jpg" alt="" /></a>
-            <p>LA PERRA SE ENCUENTRA PROXIMIDAD DE ENTRAR EN CELO , PREFERENTEMENTE ,
-              QUE SEA ,DE COLOR CHOCOLATE , PERO TAMBIÉN PODRIA, SER DORADO O NEGRO,</p>
+<br>
 
 
-          </article>
-          <article class="lastarticle">
+<div id="lista_parejas">
 
-            <h1><a href="strangerthings.html"></a></h1>
-            <a href="StrangerThings.html"><img src="images/pareja3.jpg" alt="" /></a>
-            <p>Hermoso ejemplar - Schnauzer mini blanco - Carnet sanitario al dia. Excelentes gen. Si queres cruzar tu Schnauzer mini llamame o escribieme por whatsapp o mensaje de exto - (Claro) 261 300 3068</p>
+</div>
+		</div>
 
-          </article>
-          <article>
+</section>
 
-            <h1><a href="the100.html"></a></h1>
-            <a href="the100.html"><img src="images/pareja4.jpg" alt="" /></a>
-            <p>Tengo un bulldog frances vaquira con certificado del FCA, busco una compañera para Romeo, tiene 2 años.</p>
-          </article>
-          <article>
+<!-- ModalPareja -->
+<div class="modal fade" id="modal_parejas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="txt_titulo" style="color:#000";>Buscar Pareja</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+				<!-- <form id="form_perdidos"> -->
+				<form id="form_parejas">
+					<textarea name="txt_mensaje" rows="8" cols="70"></textarea>
+						<input type="text" name="tipo" value="0" id="txt_tipo">
+				</form>
 
-            <h1><a href="arrow.html"></a></h1>
-            <a href="arrow.html"><img src="images/pareja5.jpg" alt="" /></a>
-            <p>Se trata de un dogo de 65 kilos en perfecto estado de salud .
-                Comunicarse a mi WhatsApp al 223 454 6518 . Cobro el servicio .</p>
+				<div class="input-group mb-3">
+					</div>
+					<!-- UPLOAD FOto -->
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+  </div>
+  <div class="custom-file">
+		<form id="up_foto">
+			<input type="file" class="custom-file-input" id="id_foto" aria-describedby="inputGroupFileAddon01" name="foto">
+			<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+		</form>
 
-          </article>
-          <article class="lastarticle">
+  </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="publicar">Publicar</button>
 
-            <h1><a href="strangerthings.html"></a></h1>
-            <a href="StrangerThings.html"><img src="images/pareja6.jpg" alt="" /></a>
-            <p>Soy una perra Welsh Terrier con muy buen Pedigree que busca un novio. Soy de zona norte BsAs, Olivos. Tengo 5 años, dentadura perfecta</p>
-
-          </article>
-				</div>
-			</section>
-			
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/Parejas.js" type="text/javascript"></script>
