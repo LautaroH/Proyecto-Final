@@ -1,4 +1,7 @@
-
+<?php
+session_name("BRCMascotas");
+session_start();
+ ?>
 			<!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
 			<section>
         <div id="line">

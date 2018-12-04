@@ -1,5 +1,5 @@
 <?php
-session_name("BRCmascotas");
+session_name("BRCMascotas");
 session_start();
 include "config.php";
 

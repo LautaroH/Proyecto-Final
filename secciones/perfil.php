@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+session_name("BRCMascotas");
+session_start();
+ ?>
+ <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />

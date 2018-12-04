@@ -1,5 +1,5 @@
 <?php
-session_name("BRCmascotas");
+session_name("BRCMascotas");
 session_start();
 include "../assets/config.php";
 
@@ -24,6 +24,7 @@ while ($fila=mysqli_fetch_array($query)){
   if ($tipo== 4) {//Parejas Rojo
     $tipo= "danger";
   }
+
 ?>
 <article>
  <div class="card text-center alert bg-<?=$tipo?>">
