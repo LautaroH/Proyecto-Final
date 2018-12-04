@@ -80,13 +80,16 @@ p{
 
 /************** G E N E R A L    S T Y L E ***************/
 #wrapper{
-	width: 950px;
+	width: 75%;
 	margin: 16px auto;
 	background-color: #121212;
 	padding: 20px 20px;
 	box-shadow: 0 4px 6px #000;
 }
+#wrapper img{
+	width: 100%;
 
+}
 body{
 	background: url('../images/bg.png') repeat;
 	/* font-family: Source, Tahoma, sans-serif; */
