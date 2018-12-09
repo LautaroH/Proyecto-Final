@@ -38,9 +38,13 @@ session_start();
             <?php
             $hideLogin = "";
             $hideLogout = "style='display:none;'";
+            $hidebtn_ingresar = "";
+            $hidebtn_registar = "style='display:none;'";
             if (isset($_SESSION["id_usuario"]) ) {
               $hideLogout = "";
               $hideLogin = "style='display:none;'";
+              $hidebtn_registar = "";
+              $hidebtn_ingresar  = "style='display:none;'";
             }
 
              ?>
@@ -91,15 +95,25 @@ session_start();
                       <form id="form_registro">
 
                           <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Mail" value="" />
+                              <input name="mail" type="text" class="form-control" placeholder="Mail" value="" />
                           </div>
+
                           <div class="form-group">
-                              <input type="password" class="form-control" placeholder="Usuario" value="" />
+                              <input name="usuario" type="text" class="form-control" placeholder="Usuario" value="" />
                           </div>
-                          <input type="password" class="form-control" placeholder="Clave" value="" />
+
+                          <div class="form-group">
+                              <input name="clave" type="password" class="form-control" placeholder="Clave" value="" />
+                          </div>
+
+                          <div class="form-group">
+                              <input name="confirmar_clave" type="password" class="form-control" placeholder="Confirmar Clave" value="" />
+                          </div>
+
                           <div class="form-group">
                               <a href="#" class="btnCuenta" style="color:#F42D09";>Ingresar con tu cuenta</a>
                           </div>
+
                         </form>
                     </div>
                   </div>
@@ -108,8 +122,10 @@ session_start();
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Registrarse</button>
-            <button type="button" class="btn btn-primary btn_ingresar" id="publicar">Ingresar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary " id="btn_ingresar" <?=$hidebtn_ingresar?> >Ingresar</button>
+            <button type="button" class="btn btn-primary " id="btn_registrar" <?=$hidebtn_registar?> >Registrar</button>
+
 
           </div>
           </div>
