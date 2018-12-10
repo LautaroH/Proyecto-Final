@@ -61,20 +61,23 @@ jQuery(document).ready(function(){
 
 
 
-// ABRE EL MODAL ADopcion
+// ABRE EL MODAL PARA LOGEARSE/REGISTRARSE
 $("#menu").on("click", ".btn_acceder", function(){
 
   $("#modal_acceder").modal("show");
 
 });
 
-
+//PARA QUE SE ESCONDA O VEA EL ENTRAR O SALIR DE LA SESION
 $("#modal_acceder").on("click", ".btnCuenta", function(){
   $("#registro,#login" ).toggle();
+
+  $("#btn_registrar,#btn_ingresar").toggle();
 //  $("#form_login").hide();
 });
 
-  $("#modal_acceder").on("click", ".btn_ingresar", function (){
+  //ES PARA LOGEARSE
+  $("#modal_acceder").on("click", "#btn_ingresar", function (){
 
     var datos = $("#form_login").serialize();
     // datos = datos+"&id_foto="+ id_foto;
@@ -87,7 +90,7 @@ $("#modal_acceder").on("click", ".btnCuenta", function(){
           alert("Revisar sus datos o registrarse");
           return;
         }
-        alert("funciona gato ");
+        alert("funciona gato");
 
         $("#modal_acceder").modal("hide");
 
@@ -97,7 +100,7 @@ $("#modal_acceder").on("click", ".btnCuenta", function(){
 
     })
   })
-
+  //Logout
   $(".btn_salir").click(function (){
 
     $.ajax({
@@ -111,6 +114,43 @@ $("#modal_acceder").on("click", ".btnCuenta", function(){
           $(".btn_acceder").show();
         }
       }
+    })
+  })
+  //PARA REGISTRARSE
+  $("#modal_acceder").on("click", "#btn_registrar", function (){
+
+
+
+    var clave1=$("#clave").attr('value');
+    var clave2=$("#confirmar_clave").attr('value');
+
+    if (clave1!=clave2) {
+      alert("Clave incorrecta");
+      return;
+    }
+
+
+    var datos = $("#form_registro").serialize();
+    // datos = datos+"&id_foto="+ id_foto;
+    $.ajax({
+      type:"post",
+      data:datos,
+      url:"assets/registrarse_ajax.php",
+      success: function(resultado){
+        if (resultado=="Ok") {
+          alert("Registrado con éxito");
+          return;
+        }
+
+        alert("Registrado con éxito");
+
+        $("#modal_acceder").modal("hide");
+
+        $(".btn_salir").show();
+        $(".btn_acceder").hide();
+        $('#form_registro').trigger("reset");
+      }
+
     })
   })
   //
