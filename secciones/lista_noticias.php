@@ -21,18 +21,18 @@ while ($fila=mysqli_fetch_array($query)){
     $img=$fila["imagen"];//$fila["urlimg"];
   }
 
-    switch ($tipo) {  
+    switch ($tipo) {
       case '0':
         $tipo="primary";
         break;
       case '1':
         $tipo="success";
         break;
-      case '2':
-        $tipo="warning";
+      case '4':
+        $tipo="danger";
         break;
       case '3':
-        $tipo="danger";
+        $tipo="warning";
         break;
     }
 
