@@ -67,7 +67,6 @@
     var tipo=$(this).attr("tipo");//0 o 1
 
       $("#txt_tipo").val(tipo);
-      $("#txt_titulo").text("Buscar Pareja");
       if (tipo==4)  {
        $("#txt_titulo").text("Buscar Pareja");
       }
