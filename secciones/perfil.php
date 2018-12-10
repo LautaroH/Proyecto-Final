@@ -55,89 +55,13 @@ session_start();
 			<!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
 			<section>
 				<div id="ourserv">
-					<article>
-
-						<h1><a href="">Todo sobre la 5ta Temporada de "The 100"</a></h1>
-						<a href=""><img src="images/the100.jpg" alt="" /></a>
-
-					</article>
-					<article>
-						<h1><a href="arrow.html">Arrow, Flash  y otras renovadas</a></h1>
-						<a href="arrow.html"><img src="images/cw.jpg" alt="" /></a>
-
-
-					</article>
-					<article class="lastarticle">
-						<h1><a href="strangerthings.html">Stranger Things ¿Plagio?</a></h1>
-						<a href="StrangerThings.html"><img src="images/things.jpg" alt="" /></a>
-
-
-					</article>
 				</div>
 				<div id="sline">
 					<div class="sdline"></div>
 
 					<div class="sdline"></div>
 				</div>
-				<div id="latestp">
-					<article>
 
-					<h1><a href="hawkeye.html">¿Donde esta Hawkeye?</a></h1>
-					<a href="hawkeye.html"><img src="images/hawkeye.jpg" alt="" /></a>
-
-
-
-					</article>
-					<article>
-						<h1><a href="animalesfantasticos.html"> Fantastic Beasts 2</a></h1>
-						<a href="animalesfantasticos.html"><img src="images/fantasticos.jpg" alt="" /></a>
-
-
-					</article>
-					<article>
-						<h1><a href="deadpool.html">Wade Wilson y David Beckham</a></h1>
-						<a href="deadpool.html"><img src="images/deadpool2.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article class="lastarticle">
-						<h1><a href="antman.html">Ant-Man and the Wasp</a></h1>
-						<a href="antman.html"><img src="images/antman.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<br>
-						<br>
-						<h1><a href="reasonswhy.html"> Regreso 13 Reasons Why</a></h1>
-						<a href="reasonswhy.html"><img src="images/reasonswhy.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<h1><a href="lukecage.html">Luke Cage temporada 2</a></h1>
-						<a href="lukecage.html"><img src="images/lukecage.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<h1><a href="daredevil.html">Daredevil temporada 3 </a></h1>
-						<a href="daredevil.html"><img src="images/daredevil.jpg" alt="" /></a>
-
-
-					</article>
-
-					<article>
-						<h1><a href="theshooter.html">Vuelve "The Shooter"</a></h1>
-						<a href="theshooter.html"><img src="images/theshooterr.jpg" alt="" /></a>
-
-
-					</article>
-				</div>
 			</section>
 			<!--__--__--__--__--  T H E    F O O T E R --__--__--__--___--__--__--__-->
 			<footer>
