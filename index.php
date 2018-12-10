@@ -123,8 +123,8 @@ session_start();
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary " id="btn_ingresar" <?=$hidebtn_ingresar?> >Ingresar</button>
-            <button type="button" class="btn btn-primary " id="btn_registrar" <?=$hidebtn_registar?> >Registrar</button>
+            <button type="button" class="btn btn-primary btn_ingresar" id="btn_ingresar" <?=$hidebtn_ingresar?> >Ingresar</button>
+            <button type="button" class="btn btn-primary btn_registrar" id="btn_registrar" <?=$hidebtn_registar?> >Registrar</button>
 
 
           </div>
