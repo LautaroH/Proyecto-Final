@@ -20,7 +20,7 @@ $sql= "SELECT `id`, `usuario` FROM `usuarios` WHERE `mail`= '$usuario' AND `clav
 			}
 
 echo $resultado;
-echo $_SESSION["id_usuario"];
+//echo $_SESSION["id_usuario"];
 
 
 ?>
