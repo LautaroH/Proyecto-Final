@@ -234,7 +234,14 @@ header{
 	margin-bottom: 10px;
 }
 
+.mytext{
+    border:0;padding:10px;background:whitesmoke;
+}
 
+.chat{
+  padding: 275px;
+
+}
 #ourserv article{
 	width: 275px;
 	display: inline-block;
