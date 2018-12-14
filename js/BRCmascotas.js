@@ -153,6 +153,13 @@ $("#modal_acceder").on("click", ".btnCuenta", function(){
 
     })
   })
+
+  //ABRE EL MODAL Mascotas
+  $("#contenedor_seccion").on("click", ".contactar_usuario", function(e){
+    e.preventDefault();
+    $("#modal_chat").modal("show");
+
+  });
   //
   // function traertarjetas(){
   //   alert("HOLO");
