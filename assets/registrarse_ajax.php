@@ -13,6 +13,12 @@ $resultado="Falso";
 //INSERT INTO `usuarios`(`usuario`, `clave`, `mail`) VALUES ('Carlos', 'carlos123', 'carlos@gmail.com')
 $sql= "INSERT INTO `usuarios`(`usuario`, `clave`, `mail`)  VALUES ('$nombre', '$clave', '$usuario')";
 		$query= mysqli_query($conexion, $sql);
+		$last_id = mysqli_insert_id($conexion);
+
+			$_SESSION["id_usuario"]=$last_id;
+			$_SESSION["usuario"]=$nombre;
+
+
 			//  echo $sql;
 echo $resultado;
 //echo $_SESSION["id_usuario"];
