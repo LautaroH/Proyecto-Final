@@ -2,15 +2,14 @@
 session_name("BRCMascotas");
 session_start();
  ?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/default/default.css" type="text/css" media="screen" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-		<script src="jquery.nivo.slider.pack.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="plugins/bootstrap/4.1.3/bootstrap.min.css">
+      <link rel="stylesheet" href="css/BRCMascotas.css" />
+
+
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -22,23 +21,39 @@ session_start();
 			<!--__--__--__--__--__--  L O G O  &   N A V    B A R --__--___--__--__--__-->
 			<header>
 				<div id="logo">
-				<h1>MASCOTAS BARILOCHE</h1>
+				<h1 style="margin-top:20px">MASCOTAS BARILOCHE</h1>
 				<div id="tagline">
 					<h2></h2>
 				</div>
 				</div>
 
-				<nav>
+				<nav id="menu">
 					<ul>
-						<li><a href="index.php" id="fullwidthnav">Inicio</a></li>
-						<li><a href="mascotas.php" id="fullwidthnav">Mascotas Perdidas</a></li>
-						<li><a href="adopcion.php" id="fullwidthnav">Adopcion</a></li>
-            <li><a href="parejas.php" id="fullwidthnav">Parejas</a></li>
-            <li><a href="Veterinarias.php" id="fullwidthnav">Veterinarias</a></li>
-            <li><a href="perfil.php" id="homenav">Perfil</a></li>
+						<li><a href="javascript:;" id="homenav" class="btn_seccion" seccion="noticias">Inicio</a></li>
+						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="mascotas">Mascotas Perdidas</a></li>
+						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="adopcion">Adopcion</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="parejas">Parejas</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="veterinarias">Veterinarias</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="perfil">Perfil</a></li>
+            <?php
+            $hideLogin = "";
+            $hideLogout = "style='display:none;'";
+            $hidebtn_ingresar = "";
+            $hidebtn_registar = "style='display:none;'";
+            if (isset($_SESSION["id_usuario"]) ) {
+              $hideLogout = "";
+              $hideLogin = "style='display:none;'";
+              $hidebtn_registar = "";
+              $hidebtn_ingresar  = "style='display:none;'";
+            }
+
+             ?>
+            <li><a href="javascript:;" class="btn_acceder" <?=$hideLogin?> >Login</a></li>
+            <li><a href="javascript:;" class="btn_salir" <?=$hideLogout?> >Logout</a></li>
 					</ul>
 				</nav>
 			</header>
+
 
 			<!--__--__--__--__--  T H E    S L I D E R --__--__--__--___--__--__--__-->
       <div class="slider-wrapper theme-default">
