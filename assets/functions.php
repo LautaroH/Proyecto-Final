@@ -1,5 +1,6 @@
 <?php
 
+    session_start();
 
     function connectDatabase() {
 
@@ -14,6 +15,22 @@
 
 
     function listMessagesByIdUsuario($idUsuarioRemitente) {
+        $conexion = connectDatabase();
+
+        $sql = "SELECT * FROM `chat` WHERE `id_usuario` = '" . $idUsuarioRemitente . ' AND `id_destinatario` = ". $_SESSION['id_usuario'];
+
+        if($result = mysqli_query($conexion, $sql)){
+            
+            $mensajeList = array();
+
+            while($obj = mysqli_fetch_object($result, "Chat")){
+                array_push($mensajeList, $obj);
+            }
+
+            return $mensajeList;
+        }
+        return array();
+
 
     }
 
