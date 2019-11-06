@@ -26,5 +26,6 @@ while ($fila=mysqli_fetch_array($query)){
   }else {//encontrados verdes
     $tipo="success";
   } 
+}
 
 ?>

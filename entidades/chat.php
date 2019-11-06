@@ -8,6 +8,6 @@
      public $mascotas;
      public $publicaciones;
      public $usuarios;
-
+   }
 
 ?>
