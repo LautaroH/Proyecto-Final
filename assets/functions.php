@@ -41,7 +41,7 @@
 
     function sendMessage($idDestinatario, $mensaje, $idPublicacion) {
       $conexion = connectDatabase();
-      $sql= "INSERT INTO `chat` (`id_usuario`,`mensaje`,`id_destinatario`,`id_publicacion`) VALUES ('".$_SESSION['id_usuario']."','".$mensaje."','".$idDestinatario."','".$idPublicacion."')"
+      $sql= "INSERT INTO `chat` (`id_usuario`,`mensaje`,`id_destinatario`,`id_publicacion`) VALUES ('".$_SESSION['id_usuario']."','".$mensaje."','".$idDestinatario."','".$idPublicacion."')";
       mysqli_query($conexion,$sql);
       mysqli_close($conexion);
 
