@@ -28,8 +28,12 @@
                 array_push($mensajeList, $obj);
             }
 
+            mysqli_close($conexion);
+
             return $mensajeList;
         }
+        mysqli_close($conexion);
+
         return array();
 
 
@@ -51,9 +55,13 @@
             while($obj = mysqli_fetch_object($result, "Usuario")){
                 array_push($usuariosList, $obj);
             }
+            mysqli_close($conexion);
+
 
             return $usuariosList;
         }
+        mysqli_close($conexion);
+
         return array();
 
 
