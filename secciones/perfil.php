@@ -3,334 +3,351 @@
     require_once("../assets/functions.php");
  ?>
 
-<!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
-<section>
+
+<head>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css"
+        rel="stylesheet" />
+    <style type="text/css">
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .inbox_people {
+            background: #f8f8f8 none repeat scroll 0 0;
+            float: left;
+            overflow: hidden;
+            width: 40%;
+            border-right: 1px solid #c4c4c4;
+        }
+
+        .inbox_msg {
+            border: 1px solid #c4c4c4;
+            clear: both;
+            overflow: hidden;
+        }
+
+        .top_spac {
+            margin: 20px 0 0;
+        }
 
 
-    <!DOCTYPE html>
-    <html lang="en">
+        .recent_heading {
+            float: left;
+            width: 40%;
+        }
 
-    <head>
-        <meta charset="utf-8">
-        <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-        <title>Message Chat Box - Bootsnipp.com</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-        <style type="text/css">
-            .container {
-                max-width: 1170px;
-                margin: auto;
-            }
+        .srch_bar {
+            display: inline-block;
+            text-align: right;
+            width: 60%;
+        }
 
-            img {
-                max-width: 100%;
-            }
+        .headind_srch {
+            padding: 10px 29px 10px 20px;
+            overflow: hidden;
+            border-bottom: 1px solid #c4c4c4;
+        }
 
-            .inbox_people {
-                background: #f8f8f8 none repeat scroll 0 0;
-                float: left;
-                overflow: hidden;
-                width: 40%;
-                border-right: 1px solid #c4c4c4;
-            }
+        .recent_heading h4 {
+            color: #05728f;
+            font-size: 21px;
+            margin: auto;
+        }
 
-            .inbox_msg {
-                border: 1px solid #c4c4c4;
-                clear: both;
-                overflow: hidden;
-            }
+        .srch_bar input {
+            border: 1px solid #cdcdcd;
+            border-width: 0 0 1px 0;
+            width: 80%;
+            padding: 2px 0 4px 6px;
+            background: none;
+        }
 
-            .top_spac {
-                margin: 20px 0 0;
-            }
+        .srch_bar .input-group-addon button {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: medium none;
+            padding: 0;
+            color: #707070;
+            font-size: 18px;
+        }
 
+        .srch_bar .input-group-addon {
+            margin: 0 0 0 -27px;
+        }
 
-            .recent_heading {
-                float: left;
-                width: 40%;
-            }
+        .chat_ib h5 {
+            font-size: 15px;
+            color: #464646;
+            margin: 0 0 8px 0;
+        }
 
-            .srch_bar {
-                display: inline-block;
-                text-align: right;
-                width: 60%;
-            }
+        .chat_ib h5 span {
+            font-size: 13px;
+            float: right;
+        }
 
-            .headind_srch {
-                padding: 10px 29px 10px 20px;
-                overflow: hidden;
-                border-bottom: 1px solid #c4c4c4;
-            }
+        .chat_ib p {
+            font-size: 14px;
+            color: #989898;
+            margin: auto
+        }
 
-            .recent_heading h4 {
-                color: #05728f;
-                font-size: 21px;
-                margin: auto;
-            }
+        .chat_img {
+            float: left;
+            width: 11%;
+        }
 
-            .srch_bar input {
-                border: 1px solid #cdcdcd;
-                border-width: 0 0 1px 0;
-                width: 80%;
-                padding: 2px 0 4px 6px;
-                background: none;
-            }
+        .chat_ib {
+            float: left;
+            padding: 0 0 0 15px;
+            width: 88%;
+        }
 
-            .srch_bar .input-group-addon button {
-                background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-                border: medium none;
-                padding: 0;
-                color: #707070;
-                font-size: 18px;
-            }
+        .chat_people {
+            overflow: hidden;
+            clear: both;
+        }
 
-            .srch_bar .input-group-addon {
-                margin: 0 0 0 -27px;
-            }
+        .chat_list {
+            border-bottom: 1px solid #c4c4c4;
+            margin: 0;
+            padding: 18px 16px 10px;
+        }
 
-            .chat_ib h5 {
-                font-size: 15px;
-                color: #464646;
-                margin: 0 0 8px 0;
-            }
+        .inbox_chat {
+            height: 550px;
+            overflow-y: scroll;
+        }
 
-            .chat_ib h5 span {
-                font-size: 13px;
-                float: right;
-            }
+        .active_chat {
+            background: #ebebeb;
+        }
 
-            .chat_ib p {
-                font-size: 14px;
-                color: #989898;
-                margin: auto
-            }
+        .incoming_msg_img {
+            display: inline-block;
+            width: 6%;
+        }
 
-            .chat_img {
-                float: left;
-                width: 11%;
-            }
+        .received_msg {
+            display: inline-block;
+            padding: 0 0 0 10px;
+            vertical-align: top;
+            width: 92%;
+        }
 
-            .chat_ib {
-                float: left;
-                padding: 0 0 0 15px;
-                width: 88%;
-            }
+        .received_withd_msg p {
+            background: #ebebeb none repeat scroll 0 0;
+            border-radius: 3px;
+            color: #646464;
+            font-size: 14px;
+            margin: 0;
+            padding: 5px 10px 5px 12px;
+            width: 100%;
+        }
 
-            .chat_people {
-                overflow: hidden;
-                clear: both;
-            }
+        .time_date {
+            color: #747474;
+            display: block;
+            font-size: 12px;
+            margin: 8px 0 0;
+        }
 
-            .chat_list {
-                border-bottom: 1px solid #c4c4c4;
-                margin: 0;
-                padding: 18px 16px 10px;
-            }
+        .received_withd_msg {
+            width: 57%;
+        }
 
-            .inbox_chat {
-                height: 550px;
-                overflow-y: scroll;
-            }
+        .mesgs {
+            float: left;
+            padding: 30px 15px 0 25px;
+            width: 60%;
+        }
 
-            .active_chat {
-                background: #ebebeb;
-            }
+        .sent_msg p {
+            background: #05728f none repeat scroll 0 0;
+            border-radius: 3px;
+            font-size: 14px;
+            margin: 0;
+            color: #fff;
+            padding: 5px 10px 5px 12px;
+            width: 100%;
+        }
 
-            .incoming_msg_img {
-                display: inline-block;
-                width: 6%;
-            }
+        .outgoing_msg {
+            overflow: hidden;
+            margin: 26px 0 26px;
+        }
 
-            .received_msg {
-                display: inline-block;
-                padding: 0 0 0 10px;
-                vertical-align: top;
-                width: 92%;
-            }
+        .sent_msg {
+            float: right;
+            width: 46%;
+        }
 
-            .received_withd_msg p {
-                background: #ebebeb none repeat scroll 0 0;
-                border-radius: 3px;
-                color: #646464;
-                font-size: 14px;
-                margin: 0;
-                padding: 5px 10px 5px 12px;
-                width: 100%;
-            }
+        .input_msg_write input {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: medium none;
+            color: #4c4c4c;
+            font-size: 15px;
+            min-height: 48px;
+            width: 100%;
+        }
 
-            .time_date {
-                color: #747474;
-                display: block;
-                font-size: 12px;
-                margin: 8px 0 0;
-            }
+        .type_msg {
+            border-top: 1px solid #c4c4c4;
+            position: relative;
+        }
 
-            .received_withd_msg {
-                width: 57%;
-            }
+        .msg_send_btn {
+            background: #05728f none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            font-size: 17px;
+            height: 33px;
+            position: absolute;
+            right: 0;
+            top: 11px;
+            width: 33px;
+        }
 
-            .mesgs {
-                float: left;
-                padding: 30px 15px 0 25px;
-                width: 60%;
-            }
+        .messaging {
+            padding: 0 0 50px 0;
+        }
 
-            .sent_msg p {
-                background: #05728f none repeat scroll 0 0;
-                border-radius: 3px;
-                font-size: 14px;
-                margin: 0;
-                color: #fff;
-                padding: 5px 10px 5px 12px;
-                width: 100%;
-            }
+        .msg_history {
+            height: 516px;
+            overflow-y: auto;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
 
-            .outgoing_msg {
-                overflow: hidden;
-                margin: 26px 0 26px;
-            }
+<body>
 
-            .sent_msg {
-                float: right;
-                width: 46%;
-            }
+    <div class="container">
+        <h3 class=" text-center">Messaging</h3>
+        <div class="messaging">
+            <div class="inbox_msg">
+                <div class="inbox_people">
+                    <div class="headind_srch">
+                        <div class="recent_heading">
+                            <h4>Recent</h4>
+                        </div>
+                        <div class="srch_bar">
+                            <div class="stylish-input-group"></div>
+                        </div>
+                    </div>
 
-            .input_msg_write input {
-                background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-                border: medium none;
-                color: #4c4c4c;
-                font-size: 15px;
-                min-height: 48px;
-                width: 100%;
-            }
-
-            .type_msg {
-                border-top: 1px solid #c4c4c4;
-                position: relative;
-            }
-
-            .msg_send_btn {
-                background: #05728f none repeat scroll 0 0;
-                border: medium none;
-                border-radius: 50%;
-                color: #fff;
-                cursor: pointer;
-                font-size: 17px;
-                height: 33px;
-                position: absolute;
-                right: 0;
-                top: 11px;
-                width: 33px;
-            }
-
-            .messaging {
-                padding: 0 0 50px 0;
-            }
-
-            .msg_history {
-                height: 516px;
-                overflow-y: auto;
-            }
-        </style>
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    </head>
-
-    <body>
-
-        <html>
-
-        <head>
-
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css"
-                rel="stylesheet" </head> <body>
-            <div class="container">
-                <h3 class=" text-center">Messaging</h3>
-                <div class="messaging">
-                    <div class="inbox_msg">
-                        <div class="inbox_people">
-                            <div class="headind_srch">
-                                <div class="recent_heading">
-                                    <h4>Recent</h4>
-                                </div>
-                                <div class="srch_bar">
-                                    <div class="stylish-input-group"></div>
-                                </div>
-                            </div>
-
-                            <!-- Listado de personas con las que se tienen mensajes. -->
-                            <div class="inbox_chat">
-                                <div class="chat_list active_chat">
-                                    <div class="chat_people">
-                            <?php
+                    <!-- Listado de personas con las que se tienen mensajes. -->
+                    <div class="inbox_chat">
+                        <div class="chat_list active_chat">
+                            <div class="chat_people">
+                                <?php
 
                                 $usuariosList = listUsuarioMessage();
 
                                 foreach ($usuariosList as $usuario) {
                                     
-                            ?>                            
+                            ?>
+                            <a href="#" class="usuarioChat" <?php echo 'id_usuario="'.$usuario->id.'"'; ?> ></a>
                                 <div class="chat_ib">
-                                    <h5><?php echo $usuario->usuario ?><span class="chat_date">Dec 25</span></h5>
+                                    <h5><?php echo $usuario->usuario ?><span class="chat_date">Dec 25</span>
+                                    </h5>
                                     <p>Test, which is a new approach to have all solutions
                                         astrology under one roof.</p>
                                 </div>
-                            <?php
+                                <?php
                                 }
                             ?>
-                            </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="mesgs">
-                            <div class="msg_history">
-                                <div class="incoming_msg">
-                                    <div class="received_msg">
-
-                                        <!-- Mensaje entrante -->
-                                        <div class="received_withd_msg">
-                                            <p>Test which is a new approach to have all
-                                                solutions</p>
-                                            <span class="time_date">asdasdasdasd</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Mensaje saliente -->
-                                <div class="outgoing_msg">
-                                    <div class="sent_msg">
-                                        <p>Test which is a new approach to have all
-                                            solutions</p>
-                                        <span class="time_date"> </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="type_msg">
-                                <div class="input_msg_write">
-                                    <input type="text" class="write_msg" placeholder="Type a message" />
-
-                                    <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <div class="mesgs">
+                    <div id="msg_history" class="msg_history">
+                        <div class="incoming_msg">
+                            <div class="received_msg">
+
+                                <!-- Mensaje entrante -->
+                                <div class="received_withd_msg">
+                                    <p>Test which is a new approach to have all
+                                        solutions</p>
+                                    <span class="time_date">asdasdasdasd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mensaje saliente -->
+                        <div class="outgoing_msg">
+                            <div class="sent_msg">
+                                <p>Test which is a new approach to have all
+                                    solutions</p>
+                                <span class="time_date"> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type_msg">
+                        <div class="input_msg_write">
+                            <input id="messageText" type="text" class="write_msg" placeholder="Type a message" />
+
+                            <button id="btnSendMessage" class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o"
+                                    aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-    </body>
+        </div>
+    </div>
 
     </html>
-    </body>
 
-    </html>
+    <script>
 
-</section>
-<!--__--__--__--__--  T H E    F O O T E R --__--__--__--___--__--__--__-->
-<footer>
+        var usuarioChatActual = null;
 
-</footer>
-</div>
-</body>
+        $("#btnSendMessage").on("click", function() {
+            sendMessage();
+        });
 
-</html>
+
+        function chatWith(idUsuario) {
+            alert(idUsuario);
+        }
+
+        function sendMessage() {
+
+            let texto = $("#messageText").val();
+            if(!texto) return alert("Debes escribir el texto a enviar.");
+
+            alert(texto);
+
+            updateMessagesBody(null);
+            
+            $("#messageText").val("");
+        }
+
+        function updateMessagesBody(idUsuario) {
+            $("#msg_history").html("");
+
+
+            $.ajax({
+                url: '../assets/listMensaje.php?idUsuarioRemitente=' + idUsuario,
+                method: 'GET',
+                success: function(data) {
+                    alert(data);
+                }
+            })
+
+        }
+
+
+
+    </script>
