@@ -56,8 +56,9 @@
 
             $usuariosList = array();
 
-            while($obj = mysqli_fetch_object($result, "Usuario")){
-                $usuario = findUsuarioByID($obj->id);
+            while($obj = mysqli_fetch_array($result)){
+
+                $usuario = findUsuarioByID($obj[0]);
                 array_push($usuariosList, $usuario);
             }
             mysqli_close($conexion);
@@ -76,23 +77,18 @@
 
       $conexion = connectDatabase();
 
-      $sql= "SELECT * FROM `usuarios` WHERE usuarios.`id` = $id_usuario";
+      $sql= "SELECT * FROM `usuarios` WHERE `usuarios`.`id` = ".$id_usuario;
 
         if($result = mysqli_query($conexion, $sql)){
 
-          $usuariosList = array();
-
-        while ($obj = mysqli_fetch_object($result, "Usuario")){
-            array_push($usuariosList, $obj);
-
+            while ($obj = mysqli_fetch_object($result, "Usuario")){
+                return $obj;
+            }
+            mysqli_close($conexion);
         }
         mysqli_close($conexion);
 
-        return $usuariosList;
-        }
-        mysqli_close($conexion);
-
-        return array();
+        return null;
 
 
     }
