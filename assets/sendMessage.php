@@ -4,7 +4,9 @@
 
   require_once('functions.php');
 
-/*  $algo= listUsuarioMessage
-  var_dump($algo)*/
-    sendMessage(13, "Probando", null);
+    $idDestinatario = $_POST['idDestinatario'];
+    $mensaje = $_POST['mensaje'];
+    $idPublicacion = $_POST['idPublicacion'];
+
+    sendMessage($idDestinatario, $mensaje, $idPublicacion);
  ?>
