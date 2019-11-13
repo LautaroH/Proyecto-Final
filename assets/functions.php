@@ -50,15 +50,15 @@
     function listUsuarioMessage(){
         $conexion = connectDatabase();
 
-        $sql = "SELECT chat.`id_usuario` FROM `chat` AS chat WHERE chat.`id_destinatario` = 15 OR chat.`id_usuario` = 15 GROUP BY chat.`id_usuario`";
-
+        $sql = "SELECT chat.`id_usuario` FROM `chat` AS chat WHERE chat.`id_destinatario` = ".$_SESSION['id_usuario']." OR chat.`id_usuario` = ".$_SESSION['id_usuario']." GROUP BY chat.`id_usuario`";
 
         if($result = mysqli_query($conexion, $sql)){
 
             $usuariosList = array();
 
             while($obj = mysqli_fetch_object($result, "Usuario")){
-                array_push($usuariosList, $obj);
+                $usuario = findUsuarioByID($obj->id);
+                array_push($usuariosList, $usuario);
             }
             mysqli_close($conexion);
 
