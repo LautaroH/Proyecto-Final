@@ -72,6 +72,30 @@
 
     }
 
+    function findUsuarioByID($id_usuario){
+
+      $conexion = connectDatabase();
+
+      $sql= "SELECT * FROM `usuarios` WHERE usuarios.`id` = $id_usuario";
+
+        if($result = mysqli_query($conexion, $sql)){
+
+          $usuariosList = array();
+
+        while ($obj = mysqli_fetch_object($result, "Usuario")){
+            array_push($usuariosList, $obj);
+
+        }
+        mysqli_close($conexion);
+
+        return $usuariosList;
+        }
+        mysqli_close($conexion);
+
+        return array();
+
+
+    }
 
 
 

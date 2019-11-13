@@ -6,5 +6,5 @@
    $idUsuarioRemitente = $_GET['idUsuarioRemitente'];
 
   echo listMessagesByIdUsuario($idUsuarioRemitente);
-  //var_dump($algo)
+  // var_dump($algo)
  ?>
