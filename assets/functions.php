@@ -49,7 +49,8 @@
 
     function listUsuarioMessage(){
         $conexion = connectDatabase();
-        $sql="SELECT * FROM  `usuarios`JOIN `chat` ON `chat`.`id_usuario`=`usuarios`.id OR `chat`.`id_destinatario` = `usuarios`.`id` WHERE `usuarios`.`id`= ".$_SESSION['id_usuario'];
+
+        $sql = "SELECT chat.`id_usuario` FROM `chat` AS chat WHERE chat.`id_destinatario` = 15 OR chat.`id_usuario` = 15 GROUP BY chat.`id_usuario`";
 
 
         if($result = mysqli_query($conexion, $sql)){

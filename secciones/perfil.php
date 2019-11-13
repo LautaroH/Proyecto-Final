@@ -1,6 +1,6 @@
 <?php
-session_name("BRCMascotas");
-session_start();
+    require_once("../entidades/usuario.php");
+    require_once("../assets/functions.php");
  ?>
 
 <!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
@@ -262,15 +262,24 @@ session_start();
                             <div class="inbox_chat">
                                 <div class="chat_list active_chat">
                                     <div class="chat_people">
-                                        <div class="chat_ib">
-                                            <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                            <p>Test, which is a new approach to have all solutions
-                                                astrology under one roof.</p>
-                                        </div>
-                                    </div>
+                            <?php
+
+                                $usuariosList = listUsuarioMessage();
+
+                                foreach ($usuariosList as $usuario) {
+                                    
+                            ?>                            
+                                <div class="chat_ib">
+                                    <h5><?php echo $usuario->usuario ?><span class="chat_date">Dec 25</span></h5>
+                                    <p>Test, which is a new approach to have all solutions
+                                        astrology under one roof.</p>
+                                </div>
+                            <?php
+                                }
+                            ?>
+                            </div>
                                 </div>
                             </div>
-
 
                         </div>
                         <div class="mesgs">
