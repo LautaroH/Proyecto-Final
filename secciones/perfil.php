@@ -319,7 +319,7 @@
 
 
         function chatWith(idUsuario) {
-            alert(idUsuario);
+            usuarioChatActual = idUsuario;
         }
 
         function sendMessage() {
