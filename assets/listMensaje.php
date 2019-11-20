@@ -5,6 +5,7 @@
 
    $idUsuarioRemitente = $_GET['idUsuarioRemitente'];
 
-  echo json_encode(listMessagesByIdUsuario($idUsuarioRemitente));
+   echo json_encode(listMessagesByIdUsuario($idUsuarioRemitente));
+
   // var_dump($algo)
  ?>
