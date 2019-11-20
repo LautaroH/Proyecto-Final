@@ -146,9 +146,10 @@ session_start();
           <div class="modal-body">
     				<form id="form_perdidos">
               <div class="chat">
-                
               </div>
               <input class="mytext" placeholder="Escriba su mensaje"/>
+
+
     					<!-- <textarea name="txt_mensaje" rows="8" cols="70"></textarea> -->
     				</form>
 
@@ -166,7 +167,24 @@ session_start();
       </div>
     </div>
 
+    <script>
+    function sendMessage() {
 
+
+
+        let texto = $("#messageText").val();
+        if (!texto) return alert("Debes escribir el texto a enviar.");
+
+        alert(texto);
+
+        url: 'assets/sendMessage.php';
+        method: 'POST',
+
+        updateMessagesBody(usuarioChatActual);
+
+        $("#messageText").val("");
+    }
+    </script>
 
 
 
