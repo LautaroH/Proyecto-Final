@@ -9,4 +9,6 @@
     $idPublicacion = $_POST['idPublicacion'];
 
     sendMessage($idDestinatario, $mensaje, $idPublicacion);
+
+    echo "OK";
  ?>

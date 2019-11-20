@@ -326,7 +326,6 @@
             usuarioChatActual = idUsuario;
 
             updateMessagesBody(idUsuario);
-            alert("Chat with: " + idUsuario);
         }
 
         function sendMessage() {
@@ -336,12 +335,18 @@
             let texto = $("#messageText").val();
             if (!texto) return alert("Debes escribir el texto a enviar.");
 
-            alert(texto);
+            $.ajax({
+                url: 'assets/sendMessage.php',
+                data: "idDestinatario="+usuarioChatActual+"&mensaje="+texto+"&idPublicacion=0",
+                method: 'POST',
+                success: function(data) {
+                    updateMessagesBody(usuarioChatActual);
+                },
+                error: function(error) {
+                    alert(error);
+                }
+            })
 
-            url: 'assets/sendMessage.php';
-            method: 'POST',
-
-            updateMessagesBody(usuarioChatActual);
 
             $("#messageText").val("");
         }
@@ -362,11 +367,6 @@
 
                         if (lista[i].id_usuario == <?php echo $_SESSION['id_usuario']; ?>) {
 
-<<<<<<< HEAD
-                        if (data[i].id_usuario == <?php echo $_SESSION['id_usuario']; ?>) {
-
-=======
->>>>>>> 0f4aedd4512c3ccadf697fb08c4b55788b1a736a
                             html += "<div class=\"outgoing_msg\">"+
                                         "<div class=\"sent_msg\">"+
                                             "<p>"+lista[i].mensaje+"</p>"+
@@ -385,12 +385,6 @@
                                 "</div>"+
                             "</div>";
                         }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 0f4aedd4512c3ccadf697fb08c4b55788b1a736a
                     }
 
                     $("#msg_history").html(html);

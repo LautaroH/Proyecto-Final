@@ -18,7 +18,7 @@
     function listMessagesByIdUsuario($idUsuarioRemitente) {
         $conexion = connectDatabase();
 
-        $sql = "SELECT * FROM `chat` WHERE `id_usuario` = ".$idUsuarioRemitente." AND `id_destinatario` = ". $_SESSION['id_usuario'];
+        $sql = "SELECT * FROM `chat` WHERE (`id_usuario` = ".$idUsuarioRemitente." AND `id_destinatario` = ". $_SESSION['id_usuario']. ") OR (`id_usuario` = ".$_SESSION['id_usuario']." AND `id_destinatario` = ". $idUsuarioRemitente . ")";
 
         if($result = mysqli_query($conexion, $sql)){
 
@@ -50,7 +50,7 @@
     function listUsuarioMessage(){
         $conexion = connectDatabase();
 
-        $sql = "SELECT chat.`id_usuario` FROM `chat` AS chat WHERE chat.`id_destinatario` = ".$_SESSION['id_usuario']." OR chat.`id_usuario` = ".$_SESSION['id_usuario']." GROUP BY chat.`id_usuario`";
+        $sql = "SELECT chat.`id_usuario`, chat.`id_destinatario` FROM `chat` AS chat WHERE chat.`id_destinatario` = ".$_SESSION['id_usuario']." OR chat.`id_usuario` = ".$_SESSION['id_usuario']." GROUP BY chat.`id_usuario`";
 
         if($result = mysqli_query($conexion, $sql)){
 
@@ -58,7 +58,17 @@
 
             while($obj = mysqli_fetch_array($result)){
 
-                $usuario = findUsuarioByID($obj[0]);
+                $idUsuario = $obj[0];
+                $idDestinatario = $obj[1];
+
+                $usuario = null;
+
+                if($_SESSION['id_usuario'] == $idDestinatario) {
+                    $usuario = findUsuarioByID($idUsuario);
+                } else {
+                    $usuario = findUsuarioByID($idDestinatario);
+                }
+
                 array_push($usuariosList, $usuario);
             }
             mysqli_close($conexion);
