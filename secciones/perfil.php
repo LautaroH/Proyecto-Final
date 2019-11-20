@@ -257,7 +257,7 @@
                             ?>
                                 <a href="#" class="usuarioChat" <?php echo 'id_usuario="'.$usuario->id.'"'; ?>>
                                     <div class="chat_ib">
-                                        <h5><?php echo $usuario->usuario ?><span class="chat_date">Dec 25</span>
+                                        <h5><?php echo $usuario->usuario ?><span class="chat_date"></span>
                                         </h5>
                                         <p>Test, which is a new approach to have all solutions
                                             astrology under one roof.</p>
@@ -277,9 +277,8 @@
                             <!-- Mensaje entrante -->
                             <div class="received_msg">
                                 <div class="received_withd_msg">
-                                    <p>Test which is a new approach to have all
-                                        solutions</p>
-                                    <span class="time_date">asdasdasdasd</span>
+                                    <p>Para conversar con un usuario pulsá sobre su nombre</p>
+                                    <span class="time_date"></span>
                                 </div>
                             </div>
                         </div>
@@ -287,8 +286,7 @@
                         <!-- Mensaje saliente -->
                         <div class="outgoing_msg">
                             <div class="sent_msg">
-                                <p>Test which is a new approach to have all
-                                    solutions</p>
+                                <p>Para iniciar una conversación nueva pulsá "Contactar" sobre un anuncio</p>
                                 <span class="time_date"> </span>
                             </div>
                         </div>
@@ -325,6 +323,7 @@
         function chatWith(idUsuario) {
             usuarioChatActual = idUsuario;
 
+            $("#messageText").val("");
             updateMessagesBody(idUsuario);
         }
 
@@ -333,6 +332,7 @@
 
 
             let texto = $("#messageText").val();
+            if(!usuarioChatActual) return alert("No hay ningún usuario seleccionado para chatear.");
             if (!texto) return alert("Debes escribir el texto a enviar.");
 
             $.ajax({

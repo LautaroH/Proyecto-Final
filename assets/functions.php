@@ -50,7 +50,7 @@
     function listUsuarioMessage(){
         $conexion = connectDatabase();
 
-        $sql = "SELECT chat.`id_usuario`, chat.`id_destinatario` FROM `chat` AS chat WHERE chat.`id_destinatario` = ".$_SESSION['id_usuario']." OR chat.`id_usuario` = ".$_SESSION['id_usuario']." GROUP BY chat.`id_usuario`";
+        $sql = "SELECT chat.`id_usuario`, chat.`id_destinatario` FROM `chat` AS chat WHERE chat.`id_destinatario` = ".$_SESSION['id_usuario']." OR chat.`id_usuario` = ".$_SESSION['id_usuario'];
 
         if($result = mysqli_query($conexion, $sql)){
 
@@ -69,7 +69,9 @@
                     $usuario = findUsuarioByID($idDestinatario);
                 }
 
-                array_push($usuariosList, $usuario);
+                if(!isUserInList($usuariosList, $usuario->id)) {
+                    array_push($usuariosList, $usuario);
+                }
             }
             mysqli_close($conexion);
 
@@ -79,9 +81,15 @@
         mysqli_close($conexion);
 
         return array();
-
-
     }
+
+    function isUserInList($list, $id) {
+        foreach ($list as $user) {
+            if($user->id == $id) return true;
+        }
+        return false;
+    }
+
 
     function findUsuarioByID($id_usuario){
 
