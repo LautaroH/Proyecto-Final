@@ -255,13 +255,14 @@
                                 foreach ($usuariosList as $usuario) {
                                     
                             ?>
-                            <a href="#" class="usuarioChat" <?php echo 'id_usuario="'.$usuario->id.'"'; ?> ></a>
-                                <div class="chat_ib">
-                                    <h5><?php echo $usuario->usuario ?><span class="chat_date">Dec 25</span>
-                                    </h5>
-                                    <p>Test, which is a new approach to have all solutions
-                                        astrology under one roof.</p>
-                                </div>
+                                <a href="#" class="usuarioChat" <?php echo 'id_usuario="'.$usuario->id.'"'; ?>>
+                                    <div class="chat_ib">
+                                        <h5><?php echo $usuario->usuario ?><span class="chat_date">Dec 25</span>
+                                        </h5>
+                                        <p>Test, which is a new approach to have all solutions
+                                            astrology under one roof.</p>
+                                    </div>
+                                </a>
                                 <?php
                                 }
                             ?>
@@ -273,9 +274,8 @@
                 <div class="mesgs">
                     <div id="msg_history" class="msg_history">
                         <div class="incoming_msg">
+                            <!-- Mensaje entrante -->
                             <div class="received_msg">
-
-                                <!-- Mensaje entrante -->
                                 <div class="received_withd_msg">
                                     <p>Test which is a new approach to have all
                                         solutions</p>
@@ -298,8 +298,8 @@
                         <div class="input_msg_write">
                             <input id="messageText" type="text" class="write_msg" placeholder="Type a message" />
 
-                            <button id="btnSendMessage" class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o"
-                                    aria-hidden="true"></i></button>
+                            <button id="btnSendMessage" class="msg_send_btn" type="button"><i
+                                    class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
@@ -313,24 +313,31 @@
 
         var usuarioChatActual = null;
 
-        $("#btnSendMessage").on("click", function() {
+        $("#btnSendMessage").on("click", function () {
             sendMessage();
         });
+
+        $(".usuarioChat").on("click", function () {
+            chatWith($(this).attr("id_usuario"));
+        })
 
 
         function chatWith(idUsuario) {
             usuarioChatActual = idUsuario;
+
+            updateMessagesBody(idUsuario);
+            alert("Chat with: " + idUsuario);
         }
 
         function sendMessage() {
 
             let texto = $("#messageText").val();
-            if(!texto) return alert("Debes escribir el texto a enviar.");
+            if (!texto) return alert("Debes escribir el texto a enviar.");
 
             alert(texto);
 
-            updateMessagesBody(null);
-            
+            updateMessagesBody(usuarioChatActual);
+
             $("#messageText").val("");
         }
 
@@ -339,12 +346,45 @@
 
 
             $.ajax({
-                url: '../assets/listMensaje.php?idUsuarioRemitente=' + idUsuario,
+                url: 'assets/listMensaje.php?idUsuarioRemitente=' + idUsuario,
                 method: 'GET',
-                success: function(data) {
+                success: function (data) {
+
+                    var html = "";
+
                     alert(data);
+
+                    for(var i = 0; i < data.length; i++) {
+
+
+                        if (data[i].id_usuario == <?php echo $_SESSION['id_usuario']; ?>) {
+                            
+                            html += "<div class=\"outgoing_msg\">"+
+                                        "<div class=\"sent_msg\">"+
+                                            "<p>"+data[i].mensaje+"</p>"+
+                                            "<span class=\"time_date\">"+data[i].fecha+"</span>"+
+                                        "</div>"+
+                                    "</div>";
+
+                        } else {
+
+                            html += "<div class=\"incoming_msg\">"+
+                            "<div class=\"received_msg\">"+
+                                "<div class=\"received_withd_msg\">"+
+                                    "<p>"+data[i].mensaje+"</p>"+
+                                    "<span class=\"time_date\">"+data[i].fecha+"</span>"+
+                                    "</div>"+
+                                "</div>"+
+                            "</div>";
+                        }
+
+                        
+
+                    }
+
+                    $("#msg_history").html(html);
                 }
-            })
+            });
 
         }
 
