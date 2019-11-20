@@ -253,7 +253,7 @@
                                 $usuariosList = listUsuarioMessage();
 
                                 foreach ($usuariosList as $usuario) {
-                                    
+
                             ?>
                                 <a href="#" class="usuarioChat" <?php echo 'id_usuario="'.$usuario->id.'"'; ?>>
                                     <div class="chat_ib">
@@ -331,10 +331,15 @@
 
         function sendMessage() {
 
+
+
             let texto = $("#messageText").val();
             if (!texto) return alert("Debes escribir el texto a enviar.");
 
             alert(texto);
+
+            url: 'assets/sendMessage.php';
+            method: 'POST',
 
             updateMessagesBody(usuarioChatActual);
 
@@ -358,7 +363,7 @@
 
 
                         if (data[i].id_usuario == <?php echo $_SESSION['id_usuario']; ?>) {
-                            
+
                             html += "<div class=\"outgoing_msg\">"+
                                         "<div class=\"sent_msg\">"+
                                             "<p>"+data[i].mensaje+"</p>"+
@@ -378,7 +383,7 @@
                             "</div>";
                         }
 
-                        
+
 
                     }
 
