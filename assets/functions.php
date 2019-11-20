@@ -93,6 +93,28 @@
 
     }
 
+    //crear metodo para obtener el ultimo mensaje de una conversación
+
+      function findLastMessage($idUsuarioRemitente){
+
+        $conexion = connectDatabase();
+
+        $sql= "SELECT * FROM `chat` WHERE `id_usuario` = ".$idUsuarioRemitente." AND `id_destinatario`= ".$_SESSION['id_usuario'];
+
+          if($result = mysqli_query($conexion, $sql)){
+
+              while($obj = mysqli_fetch_object($result, "Chat")){
+
+                mysqli_close($conexion);
+                
+                return $obj;
+              }
+            }
+            mysqli_close($conexion);
+
+            return null;
+
+    }
 
 
 ?>
