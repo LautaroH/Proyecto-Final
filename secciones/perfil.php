@@ -344,7 +344,6 @@
         function updateMessagesBody(idUsuario) {
             $("#msg_history").html("");
 
-
             $.ajax({
                 url: 'assets/listMensaje.php?idUsuarioRemitente=' + idUsuario,
                 method: 'GET',
@@ -352,17 +351,16 @@
 
                     var html = "";
 
-                    alert(data);
+                    var lista = JSON.parse(data);
 
-                    for(var i = 0; i < data.length; i++) {
+                    for (var i = 0; i < lista.length; i++) {
 
+                        if (lista[i].id_usuario == <?php echo $_SESSION['id_usuario']; ?>) {
 
-                        if (data[i].id_usuario == <?php echo $_SESSION['id_usuario']; ?>) {
-                            
                             html += "<div class=\"outgoing_msg\">"+
                                         "<div class=\"sent_msg\">"+
-                                            "<p>"+data[i].mensaje+"</p>"+
-                                            "<span class=\"time_date\">"+data[i].fecha+"</span>"+
+                                            "<p>"+lista[i].mensaje+"</p>"+
+                                            "<span class=\"time_date\">"+lista[i].fecha+"</span>"+
                                         "</div>"+
                                     "</div>";
 
@@ -371,15 +369,12 @@
                             html += "<div class=\"incoming_msg\">"+
                             "<div class=\"received_msg\">"+
                                 "<div class=\"received_withd_msg\">"+
-                                    "<p>"+data[i].mensaje+"</p>"+
-                                    "<span class=\"time_date\">"+data[i].fecha+"</span>"+
+                                    "<p>"+lista[i].mensaje+"</p>"+
+                                    "<span class=\"time_date\">"+lista[i].fecha+"</span>"+
                                     "</div>"+
                                 "</div>"+
                             "</div>";
                         }
-
-                        
-
                     }
 
                     $("#msg_history").html(html);
