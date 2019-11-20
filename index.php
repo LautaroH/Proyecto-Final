@@ -168,21 +168,31 @@ session_start();
     </div>
 
     <script>
-    function sendMessage() {
-
-
+    $(document).ready({
+      $(".contactar_usuario").on("click", function(){
+        alert("Funciona");
+      });
+    })
+    function sendMessage(id_usuario, id_publicacion, mensaje){
 
         let texto = $("#messageText").val();
-        if (!texto) return alert("Debes escribir el texto a enviar.");
+        if(!id_usuario) return alert("No hay ningún usuario seleccionado para chatear.");
+        if (!mensaje) return alert("Debes escribir el texto a enviar.");
 
-        alert(texto);
+        $.ajax({
+            url: 'assets/sendMessage.php',
+            data: "idDestinatario="+usuarioChatActual+"&mensaje="+texto+"&idPublicacion=0",
+            method: 'POST',
+            success: function(data) {
 
-        url: 'assets/sendMessage.php';
-        method: 'POST',
+            },
+            error: function(error) {
+                alert(error);
+            }
+        })
 
-        updateMessagesBody(usuarioChatActual);
 
-        $("#messageText").val("");
+
     }
     </script>
 
