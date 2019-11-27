@@ -358,13 +358,21 @@
             $("#messageText").val("");
         }
 
+
+        setInterval(function () {
+            if(usuarioChatActual != null) {
+                updateMessagesBody(usuarioChatActual);
+            }
+        }, 5000);
+
         function updateMessagesBody(idUsuario) {
-            $("#msg_history").html("");
 
             $.ajax({
                 url: 'assets/listMensaje.php?idUsuarioRemitente=' + idUsuario,
                 method: 'GET',
                 success: function (data) {
+
+                    $("#msg_history").html("");
 
                     var html = "";
 
