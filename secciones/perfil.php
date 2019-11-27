@@ -256,13 +256,18 @@
                                 foreach ($usuariosList as $usuario) {
 
                                     $ultimoMensaje = findLastMessage($usuario->id);
+                                    $ultimoMensajeText = "(El usuario no envió mensajes)";
+
+                                    if($ultimoMensaje != null) {
+                                        $ultimoMensajeText = $ultimoMensaje->mensaje;
+                                    }
 
                             ?>
                                 <a href="#" class="usuarioChat" <?php echo 'id_usuario="'.$usuario->id.'"'; ?>>
                                     <div class="chat_ib">
                                         <h5><?php echo $usuario->usuario ?><span class="chat_date"></span>
                                         </h5>
-                                        <p><?php echo $ultimoMensaje->mensaje; ?></p>
+                                        <p><?php echo $ultimoMensajeText; ?></p>
                                     </div>
                                 </a>
                                 <?php
