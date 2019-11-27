@@ -86,7 +86,6 @@ while ($fila=mysqli_fetch_array($query)){
 
     var usuarioChatActual = null;
     var idPublicacion = null;
-
     $(".iniciar_chat_usuario").on("click", function(){
       
       usuarioChatActual = $(this).attr("id_usuario");

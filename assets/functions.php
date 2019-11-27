@@ -68,7 +68,8 @@
                 } else {
                     $usuario = findUsuarioByID($idDestinatario);
                 }
-
+                if($usuario == null) continue;
+                
                 if(!isUserInList($usuariosList, $usuario->id)) {
                     array_push($usuariosList, $usuario);
                 }
@@ -100,11 +101,10 @@
         if($result = mysqli_query($conexion, $sql)){
 
             while ($obj = mysqli_fetch_object($result, "Usuario")){
+                mysqli_close($conexion);
                 return $obj;
             }
-            mysqli_close($conexion);
         }
-        mysqli_close($conexion);
 
         return null;
 
