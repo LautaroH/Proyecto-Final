@@ -123,7 +123,7 @@ while ($fila=mysqli_fetch_array($query)){
         if(!id_usuario) return alert("No hay ningún usuario seleccionado para chatear.");
         if (!mensaje) return alert("Debes escribir el texto a enviar.");
 
-        alert("USUARIO: " + id_usuario + "| PUBLICACION: " + id_publicacion + " | MENSAJE: " + mensaje);
+      
 
         $.ajax({
             url: 'assets/sendMessage.php',
