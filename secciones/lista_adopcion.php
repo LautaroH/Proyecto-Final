@@ -41,7 +41,7 @@ while ($fila=mysqli_fetch_array($query)){
    <br>
    <p> <?=$mensaje?> <?=$fecha?> </p>
      <div class="card-body">
-       <a href="#" class="btn btn-<?=$tipo?> alert alert-light contactar_usuario" id_usuario="<?php echo $id_usuario; ?>" id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
+       <a href="#" class="btn btn-<?=$tipo?> alert alert-light iniciar_chat_usuario" id_usuario="<?php echo $id_usuario; ?>" id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
      </div>
  </div>
 </article>
@@ -59,7 +59,7 @@ while ($fila=mysqli_fetch_array($query)){
 
 
 
- <div class="modal fade" id="modal_chat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="modal_chat_adopcion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
      <div class="modal-content">
        <div class="modal-header">
@@ -69,25 +69,57 @@ while ($fila=mysqli_fetch_array($query)){
          </button>
        </div>
        <div class="modal-body">
-         <form id="form_perdidos">
-           <div class="chat">
-           </div>
-           <input class="mytext" placeholder="Escriba su mensaje"/>
-
-
-           <!-- <textarea name="txt_mensaje" rows="8" cols="70"></textarea> -->
-         </form>
-
-         <div class="input-group mb-3">
-           </div>
-           <!-- UPLOAD FOto -->
+           <input id="messageText" class="form-control" placeholder="Escriba su mensaje"/>
 
  </div>
        <div class="modal-footer">
          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <button type="button" class="btn btn-primary" id="enviar">Enviar</button>
+         <button type="button" class="btn btn-primary" id="enviarMensajeAdopcion">Enviar</button>
 
        </div>
      </div>
    </div>
  </div>
+
+
+ <script>
+
+    var usuarioChatActual = null;
+    var idPublicacion = null;
+
+    $(".iniciar_chat_usuario").on("click", function(){
+      
+      usuarioChatActual = $(this).attr("id_usuario");
+      idPublicacion = $(this).attr("id_publicacion");
+
+      $("#modal_chat_adopcion").modal("show");
+
+    });
+
+    $("#enviarMensajeAdopcion").on("click", function() {
+      var texto = $("#messageText").val();
+      $("#messageText").val("");
+
+      sendMessage(usuarioChatActual, idPublicacion, texto);
+    })
+
+    function sendMessage(id_usuario, id_publicacion, mensaje){
+
+        if(!id_usuario) return alert("No hay ningún usuario seleccionado para chatear.");
+        if (!mensaje) return alert("Debes escribir el texto a enviar.");
+
+        $.ajax({
+            url: 'assets/sendMessage.php',
+            data: "idDestinatario="+usuarioChatActual+"&mensaje="+mensaje+"&idPublicacion=" + idPublicacion,
+            method: 'POST',
+            success: function(data) {
+                alert("Mensaje enviado, para continuar la conversación acceda a 'Perfil'");
+            },
+            error: function(error) {
+                alert(error);
+            }
+        });
+        $("#modal_chat_adopcion").modal("hide");
+
+    }
+    </script>
