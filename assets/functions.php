@@ -117,7 +117,7 @@
 
         $conexion = connectDatabase();
 
-        $sql= "SELECT * FROM `chat` WHERE `id_usuario` = ".$idUsuarioRemitente." AND `id_destinatario`= ".$_SESSION['id_usuario'];
+        $sql= "SELECT * FROM `chat` WHERE `id_usuario` = ".$idUsuarioRemitente." AND `id_destinatario`= ".$_SESSION['id_usuario']. " ORDER BY `fecha` DESC LIMIT 1";
 
           if($result = mysqli_query($conexion, $sql)){
 

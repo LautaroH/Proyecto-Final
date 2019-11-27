@@ -1,5 +1,6 @@
 <?php
     require_once("../entidades/usuario.php");
+    require_once("../entidades/chat.php");
     require_once("../assets/functions.php");
  ?>
 
@@ -254,13 +255,14 @@
 
                                 foreach ($usuariosList as $usuario) {
 
+                                    $ultimoMensaje = findLastMessage($usuario->id);
+
                             ?>
                                 <a href="#" class="usuarioChat" <?php echo 'id_usuario="'.$usuario->id.'"'; ?>>
                                     <div class="chat_ib">
                                         <h5><?php echo $usuario->usuario ?><span class="chat_date"></span>
                                         </h5>
-                                        <p>Test, which is a new approach to have all solutions
-                                            astrology under one roof.</p>
+                                        <p><?php echo $ultimoMensaje->mensaje; ?></p>
                                     </div>
                                 </a>
                                 <?php

@@ -47,7 +47,12 @@ while ($fila=mysqli_fetch_array($query)){
 </article>
 
 
+
+
+
+
 <?php
 }
 
  ?>
+
