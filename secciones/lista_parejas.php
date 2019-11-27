@@ -9,7 +9,7 @@ if(isset($_SESSION['id_usuario'])) {
 }
 
 
-$sql="SELECT p.`id`, p.`tipo`, p.`publicacion`, p.`fecha`, i.`imagen` FROM `publicaciones` p LEFT JOIN `imagenes` i ON (`i`.`id`=`p`.`id_imagen`) WHERE (`p`.`tipo`='4');";
+$sql="SELECT p.`id`, p.`tipo`, p.`id_usuario`, p.`publicacion`, p.`fecha`, i.`imagen` FROM `publicaciones` p LEFT JOIN `imagenes` i ON (`i`.`id`=`p`.`id_imagen`) WHERE (`p`.`tipo`='4');";
 //"SELECT `tipo`, `publicacion`, `fecha`, `id_imagen` FROM `publicaciones` INNER JOIN `imagenes` ON `imagenes`.`id`=`publicaciones`.`id_imagen` WHERE (tipo='0' OR tipo='1');";
 
 $query= mysqli_query($conexion, $sql);
@@ -19,6 +19,7 @@ while ($fila=mysqli_fetch_array($query)){
   $id=$fila["id"];
   $tipo=$fila["tipo"];
   $mensaje=$fila["publicacion"];
+  $id_usuario=$fila["id_usuario"];
   $fecha=$fila["fecha"];
 
   $img="sinfoto.jpg";
@@ -121,6 +122,8 @@ while ($fila=mysqli_fetch_array($query)){
 
         if(!id_usuario) return alert("No hay ningún usuario seleccionado para chatear.");
         if (!mensaje) return alert("Debes escribir el texto a enviar.");
+
+        alert("USUARIO: " + id_usuario + "| PUBLICACION: " + id_publicacion + " | MENSAJE: " + mensaje);
 
         $.ajax({
             url: 'assets/sendMessage.php',

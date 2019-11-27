@@ -9,7 +9,7 @@ if(isset($_SESSION['id_usuario'])) {
 }
 
 
-$sql="SELECT p.`id`, p.`tipo`, p.`publicacion`, p.`fecha`, i.`imagen` FROM `publicaciones` p LEFT JOIN `imagenes` i ON (`i`.`id`=`p`.`id_imagen`);";
+$sql="SELECT p.`id`, p.`tipo`, p.`id_usuario`, p.`publicacion`, p.`fecha`, i.`imagen` FROM `publicaciones` p LEFT JOIN `imagenes` i ON (`i`.`id`=`p`.`id_imagen`);";
 //"SELECT `tipo`, `publicacion`, `fecha`, `id_imagen` FROM `publicaciones` INNER JOIN `imagenes` ON `imagenes`.`id`=`publicaciones`.`id_imagen` WHERE (tipo='0' OR tipo='1');";
 
 $query= mysqli_query($conexion, $sql);
@@ -18,6 +18,8 @@ while ($fila=mysqli_fetch_array($query)){
 
   $id=$fila["id"];
   $tipo=$fila["tipo"];
+  $id_usuario=$fila["id_usuario"];
+
   $mensaje=$fila["publicacion"];
   $fecha=$fila["fecha"];
 
