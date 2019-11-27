@@ -3,6 +3,11 @@ session_name("BRCMascotas");
 session_start();
 include "../assets/config.php";
 
+$idUsuarioActual = null;
+if(isset($_SESSION['id_usuario'])) {
+  $idUsuarioActual = $_SESSION['id_usuario'];
+}
+
 
 $sql="SELECT p.`id`, p.`tipo`, p.`publicacion`, p.`fecha`, i.`imagen` FROM `publicaciones` p LEFT JOIN `imagenes` i ON (`i`.`id`=`p`.`id_imagen`);";
 //"SELECT `tipo`, `publicacion`, `fecha`, `id_imagen` FROM `publicaciones` INNER JOIN `imagenes` ON `imagenes`.`id`=`publicaciones`.`id_imagen` WHERE (tipo='0' OR tipo='1');";
@@ -49,9 +54,25 @@ while ($fila=mysqli_fetch_array($query)){
 
    <br>
    <p> <?=$mensaje?> <?=$fecha?> </p>
-     <div class="card-body">
-       <a href="#" class="btn btn-<?=$tipo?> alert alert-light iniciar_chat_usuario" id_usuario="<?php echo $id_usuario; ?>" id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
-     </div>
+   <div class="card-body">
+
+    <?php
+
+    if($idUsuarioActual == $id_usuario) {
+      ?>
+      <a href="#" class="btn btn-<?=$tipo?> alert alert-light iniciar_chat_usuario" id_usuario="<?php echo $id_usuario; ?>" id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
+
+    <?php
+    } else {
+
+    ?>
+      <a href="#" class="btn btn-<?=$tipo?> alert alert-light iniciar_chat_usuario" id_usuario="<?php echo $id_usuario; ?>" id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
+    <?php
+    }
+
+    ?>
+
+   </div>
  </div>
 </article>
 
