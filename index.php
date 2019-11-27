@@ -27,15 +27,7 @@ session_start();
 				</div>
 				</div>
 
-				<nav id="menu">
-					<ul>
-						<li><a href="javascript:;" id="homenav" class="btn_seccion" seccion="noticias">Inicio</a></li>
-						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="mascotas">Mascotas Perdidas</a></li>
-						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="adopcion">Adopcion</a></li>
-            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="parejas">Parejas</a></li>
-            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="veterinarias">Veterinarias</a></li>
-            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="perfil">Perfil</a></li>
-            <?php
+        <?php
             $hideLogin = "";
             $hideLogout = "style='display:none;'";
             $hidebtn_ingresar = "";
@@ -48,6 +40,16 @@ session_start();
             }
 
              ?>
+
+				<nav id="menu">
+					<ul>
+						<li><a href="javascript:;" id="homenav" class="btn_seccion" seccion="noticias">Inicio</a></li>
+						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="mascotas">Mascotas Perdidas</a></li>
+						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="adopcion">Adopcion</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="parejas">Parejas</a></li>
+            <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="veterinarias">Veterinarias</a></li>
+            <li><a href="javascript:;" id="btnPerfil"  class="btn_seccion" seccion="perfil" <?=$hideLogout?>>Perfil</a></li>
+            
             <li><a href="javascript:;" class="btn_acceder" <?=$hideLogin?> >Login</a></li>
             <li><a href="javascript:;" class="btn_salir" <?=$hideLogout?> >Logout</a></li>
 					</ul>

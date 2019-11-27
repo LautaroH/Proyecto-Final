@@ -88,11 +88,16 @@ $("#modal_acceder").on("click", ".btnCuenta", function(){
       success: function(resultado){
         if (resultado=="Falso") {
           alert("Revisar sus datos o registrarse");
+
+          $("#btnPerfil").hide();
+
           return;
         }
         alert("funciona gato");
 
         $("#modal_acceder").modal("hide");
+        
+        $("#btnPerfil").show();
 
         $(".btn_salir").show();
         $(".btn_acceder").hide();
@@ -110,6 +115,7 @@ $("#modal_acceder").on("click", ".btnCuenta", function(){
         if (resultado=="Ok") {
           alert("Sesion cerrada");
 
+          $("#btnPerfil").hide();
           $(".btn_salir").hide();
           $(".btn_acceder").show();
         }
