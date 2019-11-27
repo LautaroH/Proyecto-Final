@@ -62,7 +62,7 @@ while ($fila=mysqli_fetch_array($query)){
 
     if($idUsuarioActual == $id_usuario) {
       ?>
-      <a href="#" class="btn btn-<?=$tipo?> alert alert-light iniciar_chat_usuario" id_usuario="<?php echo $id_usuario; ?>" id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
+        <a href="#" class="btn btn-<?=$tipo?> alert alert-light">Ésta publicación es tuya</a>
 
     <?php
     } else {
