@@ -48,7 +48,7 @@ while ($fila=mysqli_fetch_array($query)){
      <div class="card-body">
 
       <?php
-      
+
       if($idUsuarioActual == $id_usuario) {
         ?>
         <a href="#" class="btn btn-<?=$tipo?> alert alert-light">Ésta publicación es tuya</a>
@@ -57,7 +57,7 @@ while ($fila=mysqli_fetch_array($query)){
       } else {
 
       ?>
-        <a href="#" class="btn btn-<?=$tipo?> alert alert-light iniciar_chat_usuario" id_usuario="<?php echo $id_usuario; ?>" id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
+        <a href="#" class="btn btn-<?=$tipo?> alert alert-light iniciar_chat_usuario" id_usuario="<?php echo $id_usuario; ?> " id_publicacion="<?php echo $id; ?>">Contactar Usuario</a>
       <?php
       }
 
@@ -84,7 +84,7 @@ while ($fila=mysqli_fetch_array($query)){
    <div class="modal-dialog" role="document">
      <div class="modal-content">
        <div class="modal-header">
-         <h5 class="modal-title" id="txt_titulo" style="color:#000";>Nueva publicación</h5>
+         <h5 class="modal-title" id="txt_titulo" style="color:#000";>Mensaje</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
          </button>
@@ -108,7 +108,7 @@ while ($fila=mysqli_fetch_array($query)){
     var usuarioChatActual = null;
     var idPublicacion = null;
     $(".iniciar_chat_usuario").on("click", function(){
-      
+
       usuarioChatActual = $(this).attr("id_usuario");
       idPublicacion = $(this).attr("id_publicacion");
 

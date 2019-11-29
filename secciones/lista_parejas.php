@@ -78,7 +78,7 @@ while ($fila=mysqli_fetch_array($query)){
    <div class="modal-dialog" role="document">
      <div class="modal-content">
        <div class="modal-header">
-         <h5 class="modal-title" id="txt_titulo" style="color:#000";>Nueva publicación</h5>
+         <h5 class="modal-title" id="txt_titulo" style="color:#000";>Mensaje</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
          </button>
@@ -123,7 +123,7 @@ while ($fila=mysqli_fetch_array($query)){
         if(!id_usuario) return alert("No hay ningún usuario seleccionado para chatear.");
         if (!mensaje) return alert("Debes escribir el texto a enviar.");
 
-      
+
 
         $.ajax({
             url: 'assets/sendMessage.php',
