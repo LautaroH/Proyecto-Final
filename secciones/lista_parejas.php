@@ -130,7 +130,7 @@ while ($fila=mysqli_fetch_array($query)){
             data: "idDestinatario="+usuarioChatActual+"&mensaje="+mensaje+"&idPublicacion=" + idPublicacion,
             method: 'POST',
             success: function(data) {
-                alert("Mensaje enviado, para continuar la conversación acceda a 'Perfil'");
+                alert("Mensaje enviado, para continuar la conversación acceda a 'Mensajes'");
             },
             error: function(error) {
                 alert(error);

@@ -48,8 +48,8 @@ session_start();
 						<li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="adopcion">Adopcion</a></li>
             <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="parejas">Parejas</a></li>
             <li><a href="javascript:;" id="fullwidthnav"  class="btn_seccion" seccion="veterinarias">Veterinarias</a></li>
-            <li><a href="javascript:;" id="btnPerfil"  class="btn_seccion" <?=$hideLogout?> seccion="perfil">Perfil</a></li>
-            
+            <li><a href="javascript:;" id="btnMensajes"  class="btn_seccion" <?=$hideLogout?> seccion="mensajes">Mensajes</a></li>
+
             <li><a href="javascript:;" class="btn_acceder" <?=$hideLogin?> >Login</a></li>
             <li><a href="javascript:;" class="btn_salir" <?=$hideLogout?> >Logout</a></li>
 					</ul>
@@ -169,7 +169,7 @@ session_start();
       </div>
     </div>
 
-    
+
 
 
 

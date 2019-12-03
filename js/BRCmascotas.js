@@ -89,7 +89,7 @@ jQuery(document).ready(function () {
 				if (resultado == "Falso") {
 					alert("Revisar sus datos o registrarse");
 
-					$("#btnPerfil").hide();
+					$("#btnMensajes").hide();
 
 					return;
 				}
@@ -97,7 +97,7 @@ jQuery(document).ready(function () {
 
 				$("#modal_acceder").modal("hide");
 
-				$("#btnPerfil").show();
+				$("#btnMensajes").show();
 
 				$(".btn_salir").show();
 				$(".btn_acceder").hide();
@@ -115,7 +115,7 @@ jQuery(document).ready(function () {
 				if (resultado == "Ok") {
 					alert("Sesion cerrada");
 
-					$("#btnPerfil").hide();
+					$("#btnMensajes").hide();
 					$(".btn_salir").hide();
 					$(".btn_acceder").show();
 				}
