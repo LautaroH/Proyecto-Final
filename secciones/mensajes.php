@@ -232,7 +232,12 @@
 <body>
 
     <div class="container">
-        <h3 class=" text-center">Messaging</h3>
+        <!-- <h3 class=" text-center">Messaging</h3> -->
+        <div id="line">
+          <div class="dline"></div>
+          <h1>Mensajes</h1>
+          <div class="dline"></div>
+        </div>
         <div class="messaging">
             <div class="inbox_msg">
                 <div class="inbox_people">
