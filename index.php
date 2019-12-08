@@ -21,7 +21,7 @@ session_start();
 			<!--__--__--__--__--__--  L O G O  &   N A V    B A R --__--___--__--__--__-->
 			<header>
 				<div id="logo">
-				<h1 style="margin-top:20px">MASCOTAS BARILOCHE</h1>
+				<h1 style="margin-top:20px"> <a href="javascript:;" id="homenav" class="btn_seccion" seccion="noticias"> MASCOTAS BARILOCHE</h1></a>
 				<div id="tagline">
 					<h2></h2>
 				</div>
