@@ -40,7 +40,7 @@ session_start();
 				<!-- <form id="form_perdidos"> -->
 				<form id="form_parejas">
 					<textarea name="txt_mensaje" rows="8" cols="70"></textarea>
-						<input type="text" name="tipo" value="0" id="txt_tipo">
+						<input type="text" name="tipo" value="0" id="txt_tipo" style="visibility:hidden">
 				</form>
 
 				<div class="input-group mb-3">
